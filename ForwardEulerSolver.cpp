@@ -4,6 +4,12 @@
 #include "ForwardEulerSolver.hpp"
 #include "Righthandside.hpp"
 
+ForwardEulerSolver::ForwardEulerSolver()
+{}
+
+ForwardEulerSolver::~ForwardEulerSolver()
+{}
+
 void ForwardEulerSolver::SolveEquation(Righthandside f,std::ostream& stream)
 {
 	double h, T0, T_final, n_steps ;
