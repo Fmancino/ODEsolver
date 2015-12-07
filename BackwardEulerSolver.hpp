@@ -10,7 +10,7 @@ class BackwardEulerSolver: public AbstractOdeSolver
 	public:
 	BackwardEulerSolver();
 	virtual ~BackwardEulerSolver();
-	virtual void SolveEquation(Righthandside f,std::ostream& stream);
+	virtual void SolveEquation(Righthandside* f,std::ostream& stream);
 };
 
 #endif

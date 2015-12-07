@@ -10,7 +10,7 @@ class FourStepSolver: public AbstractOdeSolver
 	public:
 	FourStepSolver();
 	virtual ~FourStepSolver();
-	virtual void SolveEquation(Righthandside f,std::ostream& stream);
+	virtual void SolveEquation(Righthandside* f,std::ostream& stream);
 };
 
 #endif

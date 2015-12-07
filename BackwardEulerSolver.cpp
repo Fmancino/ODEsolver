@@ -13,7 +13,7 @@ BackwardEulerSolver::~BackwardEulerSolver()
 {}
 
 
-void BackwardEulerSolver::SolveEquation(Righthandside f,std::ostream& stream)
+void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 {
 	double h, T0, T_final ;
 	int n_steps, n_iterations=0;
@@ -32,11 +32,11 @@ void BackwardEulerSolver::SolveEquation(Righthandside f,std::ostream& stream)
     diff=1.0;
 	for (int i=1; i <=n_steps; i++)
 	{
-		y_newton=y_prev + h * f.value(y_prev,t_prev);  // initial guess with "euler forward"
+		y_newton=y_prev + h * f->value(y_prev,t_prev);  // initial guess with "euler forward"
 		t_next=t_prev+h;
 		while (diff>0.01 && n_iterations<10000)
 		{
-		y_next=y_newton-(y_newton-y_prev-h*f.value(y_newton,t_next))/(1-h*f.gradient(y_newton,t_next));
+		y_next=y_newton-(y_newton-y_prev-h*f->value(y_newton,t_next))/(1-h*f->gradient(y_newton,t_next));
 		//std::cout << y_next << std::endl;
 		diff=abs(y_next-y_newton);
 		y_newton=y_next;
@@ -44,6 +44,7 @@ void BackwardEulerSolver::SolveEquation(Righthandside f,std::ostream& stream)
 		if (n_iterations==10000)
 				{
 			std::cout << "ERROR: max number of iterations for Newtons method reached at time: " << t_prev  << std::endl;
+			return;
 				}
 		}
 		n_iterations=0;

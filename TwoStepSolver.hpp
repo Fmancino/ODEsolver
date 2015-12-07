@@ -11,7 +11,7 @@ class TwoStepSolver: public AbstractOdeSolver
 	public:
 	TwoStepSolver();
 	virtual ~TwoStepSolver();
-	virtual void SolveEquation(Righthandside f,std::ostream& stream);
+	virtual void SolveEquation(Righthandside* f,std::ostream& stream);
 };
 
 #endif

@@ -7,31 +7,35 @@
 #include "ThreeStepSolver.hpp"
 #include "FourStepSolver.hpp"
 #include "BackwardEulerSolver.hpp"
+#include "GenericFunction.hpp"
+#include "Polynomial.hpp"
 #include <cmath>
 
 using namespace std;
 
-double fRhs(double y, double t)
+double fRhs(double y, double t)  // Right hand side
 {
-	return sin(y);
+	return pow(y,2);
 }
 
-double gradient(double y, double t)
+double gradient(double y, double t) // Derivative of the right hand side
 {
-	return cos(y);
+	return 2*y;
 }
 
 int main() {
 
-	Righthandside f(fRhs);
-	cout << f.value(3,2) << endl;
+	Righthandside *f;
+	f=new GenericFunction (fRhs,gradient);
+	cout << f->gradient(3,2) << endl;
 
 	double initialTime = 0.0;
-	double finalTime = 3.0;
-	double initialValue = 0.9;
+	double finalTime = 5.0;
+	double initialValue = 0.5;
 
-
-
+	Righthandside * poly;
+	poly= new Polynomial<int> (0,0,1);
+    cout << poly->value(3,2) << endl;
 	AbstractOdeSolver* pSolver = 0;
 
 	int numberstepsEuler = 100;
@@ -42,7 +46,7 @@ int main() {
 
 		std::ofstream eulerSolutionFile("solution_euler.dat");
 		if (eulerSolutionFile.is_open()) {
-				pSolver->SolveEquation(f,eulerSolutionFile);
+				pSolver->SolveEquation(poly,eulerSolutionFile);
 				eulerSolutionFile.close();
 			}
 
@@ -77,7 +81,6 @@ int main() {
 			FourStepSolutionFile.close();
 			}
 
-		Righthandside g(fRhs,gradient);
 
 		pSolver = new BackwardEulerSolver;
 		pSolver->SetInitialValue(initialValue);
@@ -85,7 +88,7 @@ int main() {
 		pSolver->SetNumberSteps(numberstepsAdam);
 		std::ofstream BackwardEulerSolutionFile("solution_BackwardEuler.dat");
 		if (BackwardEulerSolutionFile.is_open()) {
-			pSolver->SolveEquation(g,BackwardEulerSolutionFile);
+			pSolver->SolveEquation(poly,BackwardEulerSolutionFile);
 			BackwardEulerSolutionFile.close();
 			}
 
@@ -94,3 +97,4 @@ int main() {
 
 
 }
+

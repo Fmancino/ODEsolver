@@ -10,7 +10,7 @@ class ThreeStepSolver: public AbstractOdeSolver
 	public:
 	ThreeStepSolver();
 	virtual ~ThreeStepSolver();
-	virtual void SolveEquation(Righthandside f,std::ostream& stream);
+	virtual void SolveEquation(Righthandside* f,std::ostream& stream);
 };
 
 #endif

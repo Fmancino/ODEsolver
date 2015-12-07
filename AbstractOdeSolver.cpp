@@ -1,5 +1,15 @@
 #include "AbstractOdeSolver.hpp"
 
+AbstractOdeSolver::AbstractOdeSolver()
+	: stepNumber(),
+	  initialTime(),
+	  finalTime(),
+	  initialValue()
+{}
+
+AbstractOdeSolver::~AbstractOdeSolver()
+{}
+
 void AbstractOdeSolver::SetNumberSteps(int n)
 {
 	stepNumber=n;
