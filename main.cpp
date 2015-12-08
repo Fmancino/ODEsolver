@@ -26,7 +26,7 @@ double gradient(double y, double t) // Derivative of the right hand side
 int main() {
 
 	Righthandside *f;
-	f=new GenericFunction (fRhs,gradient);
+	f=new GenericFunction (fRhs);
 	cout << f->gradient(3,2) << endl;
 
 	double initialTime = 0.0;
@@ -88,7 +88,7 @@ int main() {
 		pSolver->SetNumberSteps(numberstepsAdam);
 		std::ofstream BackwardEulerSolutionFile("solution_BackwardEuler.dat");
 		if (BackwardEulerSolutionFile.is_open()) {
-			pSolver->SolveEquation(poly,BackwardEulerSolutionFile);
+			pSolver->SolveEquation(f,BackwardEulerSolutionFile);
 			BackwardEulerSolutionFile.close();
 			}
 

@@ -1,5 +1,7 @@
 #include "AbstractOdeSolver.hpp"
 
+// Methods for AbstractOdeSolver. The definition of every function is given in the header file.
+
 AbstractOdeSolver::AbstractOdeSolver()
 	: stepNumber(),
 	  initialTime(),
