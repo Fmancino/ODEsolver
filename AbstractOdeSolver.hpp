@@ -1,10 +1,16 @@
+/*
+ * AbstracOdeSolver.cpp
+ * Created on: Dic, 2015
+ *     Author: Francesco Mancino
+ *Description: Abstract Base class of the family of methods for solving ODE of the form dy/dt=f(y,t).
+ *			   The possible methods are defined as derived classes from this class.
+ */
+
 #ifndef ABSTRACTODESOLVERDEF
 #define ABSTRACTODESOLVERDEF
 #include "RightHandSide.hpp"
 #include <fstream>
 
-// Abstract class containing the common methods for all the different ODE solvers.
-// The ODE to be solved is of the form: dy/dt=f(y,t).
 
 class AbstractOdeSolver
 {
@@ -31,7 +37,7 @@ class AbstractOdeSolver
 
 	// Virtual function the solves the ODE, for initial conditions and Time interval specified in the methods above.
 	// This function will be defined in the Derived classes, where every method is applied.
-	// The first input is the right hand side of the ODE, and the second input is the file in which the solution will be saved.
+	// The first input is the right hand side of the ODE, also a class, and the second input is the file in which the solution will be saved.
 	virtual void SolveEquation(Righthandside* f,std::ostream& stream) = 0;
 };
 #endif

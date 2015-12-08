@@ -17,7 +17,7 @@ private:
 	Righthandside();
 	virtual ~Righthandside(); //Constructor and destructor
 
-	// Functions to get and set the information about the gradient (going to be used inside the other classes).
+	// Functions to get and set the information about the gradient, if we have a gradient or not (going to be used inside the other classes).
 	void SetGradientInfo(bool a);
 	bool GetGradientInfo() const;
 

@@ -13,15 +13,20 @@
 class GenericFunction: public Righthandside
 {
 	private:
-	double (*f_rhs)(double y, double t);
-	double (*g_rhs)(double y, double t);
+	double (*f_rhs)(double y, double t); //Function on the right hand side: f(y,t)
+	double (*g_rhs)(double y, double t); //Gradient of the above function
+
 	public:
+
 	GenericFunction();
-	virtual ~GenericFunction();
-	GenericFunction(double (*f)(double y, double t));
-	GenericFunction(double (*f)(double y, double t),double (*g)(double y, double t));
+	virtual ~GenericFunction(); //Default Constructor and destructor
+
+	GenericFunction(double (*f)(double y, double t)); //Constructor if you have only the function
+	GenericFunction(double (*f)(double y, double t),double (*g)(double y, double t)); //Constructor if you have function and gradient
+
+
 	virtual double value(double y, double t) const;
-	virtual double gradient(double y, double t) const;
+	virtual double gradient(double y, double t) const; //Virtual functions to get value and gradient of a generic function.
 
 };
 #endif

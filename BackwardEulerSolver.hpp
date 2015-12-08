@@ -21,7 +21,7 @@ class BackwardEulerSolver: public AbstractOdeSolver
 	BackwardEulerSolver();
 	virtual ~BackwardEulerSolver(); // Constructor and destructor.
 
-	// Mothod for solving the equation using Backwards Eulers Method.
+	// Method for solving the equation using Backwards Eulers Method.
 	virtual void SolveEquation(Righthandside* f,std::ostream& stream);
 };
 

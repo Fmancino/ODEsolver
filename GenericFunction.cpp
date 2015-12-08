@@ -11,19 +11,22 @@
 #include "GenericFunction.hpp"
 #include <iostream>
 
-GenericFunction::GenericFunction()
+GenericFunction::GenericFunction() //default constructor
+:f_rhs(0),g_rhs(0)
 {}
 
-GenericFunction::~GenericFunction()
+GenericFunction::~GenericFunction() //destructor
 {}
 
+// Constructor which does not specify the gradient,  only input is the function:
 GenericFunction::GenericFunction(double (*f)(double y, double t))
 {
-	f_rhs=f;
+	f_rhs=f; //Righthanside funtion
 	SetGradientInfo(false);
-	g_rhs=0; //should not be used.
+	g_rhs=0; //Should not be used.
 }
 
+// Constructor which does specify the gradient, first input is function and second input is its gradient:
 GenericFunction::GenericFunction(double (*f)(double y, double t),double (*g)(double y, double t))
 {
 	f_rhs=f;
@@ -44,8 +47,8 @@ double GenericFunction::gradient(double y, double t) const
 	}
 	else
 	{
-		std::cout << "Warning: Gradient not specified, no estimate of it will be given." << std::endl;
-	    return 0;
+		std::cout << "<GenericFunction> ERROR: Gradient not specified, function returns 0, NOT TO BE USED!!!!!!" << std::endl;
+	    return 0; // Only because it is necessary to retunr something.
 	}
 }
 

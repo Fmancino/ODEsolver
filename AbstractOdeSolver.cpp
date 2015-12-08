@@ -1,6 +1,14 @@
+/*
+ * AbstracOdeSolver.cpp
+ * Created on: Dic, 2015
+ *     Author: Francesco Mancino
+ *Description: Abstract Base class of the family of methods for solving ODE of the form dy/dt=f(y,t).
+ *			   The possible methods are defined as derived classes from this class.
+ *			   The definition of every function is given in the header file.
+ */
+
 #include "AbstractOdeSolver.hpp"
 
-// Methods for AbstractOdeSolver. The definition of every function is given in the header file.
 
 AbstractOdeSolver::AbstractOdeSolver()
 	: stepNumber(),

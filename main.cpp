@@ -1,14 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "Righthandside.hpp"
-#include "AbstractOdeSolver.hpp"
-#include "ForwardEulerSolver.hpp"
-#include "TwoStepSolver.hpp"
-#include "ThreeStepSolver.hpp"
-#include "FourStepSolver.hpp"
-#include "BackwardEulerSolver.hpp"
-#include "GenericFunction.hpp"
-#include "Polynomial.hpp"
+#include "ODESolver.hpp"
 #include <cmath>
 
 using namespace std;
@@ -38,26 +30,26 @@ int main() {
     cout << poly->value(3,2) << endl;
 	AbstractOdeSolver* pSolver = 0;
 
-	int numberstepsEuler = 100;
+	int numberstepsEuler = 1000;
 		pSolver = new ForwardEulerSolver;
 		pSolver->SetInitialValue(initialValue);
 		pSolver->SetTimeInterval(initialTime, finalTime);
 		pSolver->SetNumberSteps(numberstepsEuler);
 
-		std::ofstream eulerSolutionFile("solution_euler.dat");
+		std::ofstream eulerSolutionFile("solution_ForwardEuler.dat");
 		if (eulerSolutionFile.is_open()) {
 				pSolver->SolveEquation(poly,eulerSolutionFile);
 				eulerSolutionFile.close();
 			}
 
-		int numberstepsAdam = 1000;
+		int numberstepsAdam = 10000;
 		pSolver = new TwoStepSolver;
 		pSolver->SetInitialValue(initialValue);
 		pSolver->SetTimeInterval(initialTime, finalTime);
 		pSolver->SetNumberSteps(numberstepsAdam);
 		std::ofstream twostepSolutionFile("solution_twostep.dat");
 				if (twostepSolutionFile.is_open()) {
-						pSolver->SolveEquation(f,twostepSolutionFile);
+						pSolver->SolveEquation(poly,twostepSolutionFile);
 						twostepSolutionFile.close();
 					}
 
@@ -67,7 +59,7 @@ int main() {
 		pSolver->SetNumberSteps(numberstepsAdam);
 		std::ofstream ThreeStepSolutionFile("solution_ThreeStep.dat");
 		if (ThreeStepSolutionFile.is_open()) {
-			pSolver->SolveEquation(f,ThreeStepSolutionFile);
+			pSolver->SolveEquation(poly,ThreeStepSolutionFile);
 			ThreeStepSolutionFile.close();
 			}
 
@@ -77,7 +69,7 @@ int main() {
 		pSolver->SetNumberSteps(numberstepsAdam);
 		std::ofstream FourStepSolutionFile("solution_FourStep.dat");
 		if (FourStepSolutionFile.is_open()) {
-			pSolver->SolveEquation(f,FourStepSolutionFile);
+			pSolver->SolveEquation(poly,FourStepSolutionFile);
 			FourStepSolutionFile.close();
 			}
 

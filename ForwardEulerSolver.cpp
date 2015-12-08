@@ -6,13 +6,11 @@
  * It is derived from the abstract class AbstractOdeSolver.
  */
 
-#include <cassert>
 #include <cmath>
 #include <fstream>
 #include <iostream>
 #include "ForwardEulerSolver.hpp"
 #include "Righthandside.hpp"
-#include <math.h>
 
 ForwardEulerSolver::ForwardEulerSolver() //Constructor
 {}
@@ -43,6 +41,8 @@ void ForwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 		y_next = y_prev + h * f->value(y_prev,t_prev); //Approximation of the next value of the function with Eulers forward method.
 		t_next=t_prev+h; // Updating the time
 
+		stream << t_next << " " << y_next << "\n"; //Printing to file the function values.
+
 		if (isinf(y_next))  // Stops the solver if it reaches infinity.
 		{
 			std::cout << "Function Reached infinity at time " << t_next << ", stopping iterations for the forward Euler solver." << std::endl;
@@ -54,8 +54,6 @@ void ForwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 			std::cout << "Function Returns NaN at time " << t_next << ", stopping iterations for the forward Euler solver." << std::endl;
 			return;
 		}
-
-		stream << t_next << " " << y_next << "\n"; //Printing to file the function values.
 
 		y_prev = y_next;
 		t_prev = t_next; // Updating the values for the next iteration.

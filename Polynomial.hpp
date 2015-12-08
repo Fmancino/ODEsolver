@@ -20,7 +20,7 @@ template <class T> class Polynomial: public Righthandside
 	private:
 	T a,b,c,d,e;
 	public:
-	Polynomial()
+	Polynomial() //Default constructor
 		{
 	    	SetGradientInfo(true);
 			a=0;
@@ -30,9 +30,10 @@ template <class T> class Polynomial: public Righthandside
 			e=0;
 		}
 
-	~Polynomial()
+	~Polynomial() //Default destructor
 	{}
-    Polynomial(T a1,T b1,T c1)
+
+    Polynomial(T a1,T b1,T c1) //Constructor for a polynomial of grade 2: a+b*x+c*x^2
 	{
     	SetGradientInfo(true);
 		a=a1;
@@ -41,7 +42,8 @@ template <class T> class Polynomial: public Righthandside
 		d=0;
 		e=0;
 	}
-    Polynomial(T a1,T b1,T c1,T d1)
+
+    Polynomial(T a1,T b1,T c1,T d1) //Constructor for a polynomial of grade 3: a+b*x+c*x^2+d*x^3
     {
     	SetGradientInfo(true);
     	a=a1;
@@ -50,20 +52,23 @@ template <class T> class Polynomial: public Righthandside
     	d=d1;
     	e=0;
     }
-    Polynomial(T a1,T b1,T c1,T d1, T e1)
+
+    Polynomial(T a1,T b1,T c1,T d1, T e1) //Constructor for a polynomial of grade 4: a+b*x+c*x^2+d*x^3+e*x^4
     {
     	SetGradientInfo(true);
     	a=a1;
     	b=b1;
     	c=c1;
-    	d=0;
-    	e=0;
+    	d=d1;
+    	e=e1;
     }
-    virtual double value(double y, double t) const
+
+    virtual double value(double y, double t) const //Returns the value of the polynomial
     {
     	return a+b*y+c*pow(y,2)+d*pow(y,3)+e*pow(y,4);
     }
-    virtual double gradient(double y,double t) const
+
+    virtual double gradient(double y,double t) const //Returns derivative of the polynomial
     {
     	return b+2*c*y+3*d*pow(y,2)+4*d*pow(y,3);
     }
