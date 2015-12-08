@@ -8,7 +8,7 @@
  */
 
 #include "AbstractOdeSolver.hpp"
-
+#include <cassert>
 
 AbstractOdeSolver::AbstractOdeSolver()
 	: stepNumber(),
@@ -22,11 +22,13 @@ AbstractOdeSolver::~AbstractOdeSolver()
 
 void AbstractOdeSolver::SetNumberSteps(int n)
 {
+	assert (n>0);
 	stepNumber=n;
 }
 
 void AbstractOdeSolver::SetTimeInterval(double t0, double t1)
 {
+	assert (t1>t0);
 	 initialTime=t0;
 	 finalTime=t1;
 }

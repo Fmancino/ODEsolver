@@ -1,14 +1,15 @@
-/* Test_logistic_extionction.cpp
+/* Test_logistic_extinction.cpp
+ *
  * Created on: Dic, 2015
  *     Author: Francesco Mancino
  *Description: The Logistic equation with extinction threshold is used to test the functionality of the different solvers
- *Description: and the polynomial class of functions.
- *Description: The equation is usually be written like this: dy/dt=-r(1-y/T)(1-y/K)y which is a polynomial of grade 3: dy/dt=-r/(TK)*y^3+(r/T+r/K)*y^2-ry
- *Description: T is the extinction limit for a population (under which the population will go extinct), K is the maximum number of individual that can be sustained and r the growt rate.
- *Description: This equation is very good for testing the functionalities because the solution is well known: for a starting point under T the solution will converge to 0,
- *Description: for a starting point over T the solution will converge to K and for the starting point T the solution will stay at T.
- *Description:
- *Description: This is a good opportunity so to the functionalities of the library.
+ *			   and the polynomial class of functions.
+ *	 		   The equation is usually be written like this: dy/dt=-r(1-y/T)(1-y/K)y which is a polynomial of grade 3: dy/dt=-r/(TK)*y^3+(r/T+r/K)*y^2-ry
+ *			   T is the extinction limit for a population (under which the population will go extinct), K is the maximum number of individual that can be sustained and r the growt rate.
+ *			   This equation is very good for testing the functionalities because the solution is well known: for a starting point under T the solution will converge to 0,
+ *			   for a starting point over T the solution will converge to K and for the starting point T the solution will stay at T.
+ *
+ *			   This is a good opportunity to see the functionalities of the library.
  */
 
 

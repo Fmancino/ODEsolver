@@ -1,5 +1,5 @@
 /*
- * Polynomual.hpp
+ * Polynomial.hpp
  * Created on: Dic, 2015
  *     Author: Francesco Mancino
  *Description: Derived class from Righthandside. Allow the user to specify a polynomial of grade 2 up to 4,

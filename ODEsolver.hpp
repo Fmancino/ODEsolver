@@ -16,3 +16,4 @@
 #include "BackwardEulerSolver.hpp"
 #include "GenericFunction.hpp"
 #include "Polynomial.hpp"
+#include "SinCos.hpp"
