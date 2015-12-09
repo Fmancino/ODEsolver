@@ -1,7 +1,10 @@
-/*
+/**
  * ForwardEulersolver.hpp
+ *
  * Created on: Dic, 2015
+ *
  *     Author: Francesco Mancino
+ *
  *Description: Class that implements Forward Eulers method to solve a ODE of the form: dy/dt=f(y,t).
  * 				It is derived from the abstract class AbstractOdeSolver.
  */

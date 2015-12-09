@@ -1,4 +1,4 @@
-/*
+/**
  * ForwardEulersolver.hpp
  * Created on: Dic, 2015
  *     Author: Francesco Mancino
@@ -39,21 +39,23 @@ void ForwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 	for (int i=1; i <=n_steps; i++)
 	{
 		y_next = y_prev + h * f->value(y_prev,t_prev); //Approximation of the next value of the function with Eulers forward method.
-		t_next=t_prev+h; // Updating the time
+		t_next=t_prev + h; // Updating the time
 
 		stream << t_next << " " << y_next << "\n"; //Printing to file the function values.
 
+
 		if (isinf(y_next))  // Stops the solver if it reaches infinity.
 		{
-			std::cout << "Function Reached infinity at time " << t_next << ", stopping iterations for the forward Euler solver." << std::endl;
+			std::cout << "<ForwardEulerSolver> WARNING: Function Reached infinity at time " << t_next << ", stopping iterations for the forward Euler solver." << std::endl;
 			return;
 		}
 
 		if (isnan(y_next)) // Stops the solver if it returns NaN.
 		{
-			std::cout << "Function Returns NaN at time " << t_next << ", stopping iterations for the forward Euler solver." << std::endl;
+			std::cout << "<ForwardEulerSolver> WARNING:Function Returns NaN at time " << t_next << ", stopping iterations for the forward Euler solver." << std::endl;
 			return;
 		}
+
 
 		y_prev = y_next;
 		t_prev = t_next; // Updating the values for the next iteration.

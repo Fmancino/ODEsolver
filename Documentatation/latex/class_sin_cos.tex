@@ -1,0 +1,46 @@
+\hypertarget{class_sin_cos}{}\section{Sin\+Cos$<$ T $>$ Class Template Reference}
+\label{class_sin_cos}\index{Sin\+Cos$<$ T $>$@{Sin\+Cos$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Sin\+Cos.\+hpp$>$}
+
+Inheritance diagram for Sin\+Cos$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sin_cos}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_sin_cos_a3cac71427371707bdab285bdd397aa3d}{}\hyperlink{class_sin_cos_a3cac71427371707bdab285bdd397aa3d}{Sin\+Cos} (T a1)\label{class_sin_cos_a3cac71427371707bdab285bdd397aa3d}
+
+\begin{DoxyCompactList}\small\item\em Constructor for a sine function \+: a$\ast$sin(y) (for constructing a pure cosine function it is possible to call \hyperlink{class_sin_cos}{Sin\+Cos(0,1)}) \end{DoxyCompactList}\item 
+\hypertarget{class_sin_cos_a64e4afd2a47fa1375b101b2e439be409}{}\hyperlink{class_sin_cos_a64e4afd2a47fa1375b101b2e439be409}{Sin\+Cos} (T a1, T b1)\label{class_sin_cos_a64e4afd2a47fa1375b101b2e439be409}
+
+\begin{DoxyCompactList}\small\item\em Constructor for a function of the type\+: a$\ast$sin(y)+b$\ast$cos(y) \end{DoxyCompactList}\item 
+\hypertarget{class_sin_cos_a922f7496fd03a8429fd96e29ba21fa64}{}\hyperlink{class_sin_cos_a922f7496fd03a8429fd96e29ba21fa64}{Sin\+Cos} (T a1, T b1, T c1, T d1)\label{class_sin_cos_a922f7496fd03a8429fd96e29ba21fa64}
+
+\begin{DoxyCompactList}\small\item\em Constructor for a function of the type\+: f(y,t)=a$\ast$sin(c$\ast$y)+b$\ast$cos(d$\ast$y) \end{DoxyCompactList}\item 
+\hypertarget{class_sin_cos_a2ccce937dae380440f1278f8c0f5801c}{}virtual double \hyperlink{class_sin_cos_a2ccce937dae380440f1278f8c0f5801c}{value} (double y, double t) const \label{class_sin_cos_a2ccce937dae380440f1278f8c0f5801c}
+
+\begin{DoxyCompactList}\small\item\em Virtual function to get the value of the function on the right hand side, f(y,t) for a specific y and t. \end{DoxyCompactList}\item 
+\hypertarget{class_sin_cos_abed60e185e8838cf409613152af45ee9}{}virtual double \hyperlink{class_sin_cos_abed60e185e8838cf409613152af45ee9}{gradient} (double y, double t) const \label{class_sin_cos_abed60e185e8838cf409613152af45ee9}
+
+\begin{DoxyCompactList}\small\item\em Virtual function to get the value gradient of the function on the right hand side, f\textquotesingle{}(y,t) for a specific y and t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class Sin\+Cos$<$ T $>$}
+
+\hyperlink{_sin_cos_8hpp_source}{Sin\+Cos.\+hpp}
+
+Created on\+: Dic, 2015 \begin{DoxyVerb}Author: Francesco Mancino
+\end{DoxyVerb}
+
+
+Description\+: Derived class from \hyperlink{class_righthandside}{Righthandside}. Contructs a function of the type\+: f(y,t)=a$\ast$sin(c$\ast$y)+b$\ast$cos(d$\ast$y) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macair/\+Documents/projectode/Sin\+Cos.\+hpp\end{DoxyCompactItemize}

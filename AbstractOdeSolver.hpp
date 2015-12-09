@@ -1,8 +1,11 @@
-/*
+/*!
  * AbstracOdeSolver.cpp
+ *
  * Created on: Dic, 2015
+ *
  *     Author: Francesco Mancino
- *Description: Abstract Base class of the family of methods for solving ODE of the form dy/dt=f(y,t).
+ *
+ *Description: Abstract Base class for the family of methods for solving ODE of the form dy/dt=f(y,t).
  *			   The possible methods are defined as derived classes from this class.
  */
 
@@ -21,12 +24,12 @@ class AbstractOdeSolver
 	double initialValue; //Initial value of the solution.
 	public:
 
-	AbstractOdeSolver();  //Constructor
-	virtual ~AbstractOdeSolver();  //Destructor
+	AbstractOdeSolver();// Constructor
+	virtual ~AbstractOdeSolver(); // Destructor
 
-	void SetNumberSteps(int n); // Sets the number of steps taken by the ODE solver
-	void SetTimeInterval(double t0, double t1); //Sets the time interval of the solution.
-	void SetInitialValue(double y0); // Sets the initial value of the solution
+	void SetNumberSteps(int n); ///< Sets the number of steps taken by the ODE solver	.
+	void SetTimeInterval(double t0, double t1); ///<Sets the time interval of the solution
+	void SetInitialValue(double y0); ///< Sets the initial value of the solution
 
 
 	// Different methods to get the values of the private variables.
@@ -35,9 +38,8 @@ class AbstractOdeSolver
 	double GetFinalTime();
 	double GetInitialValue();
 
-	// Virtual function the solves the ODE, for initial conditions and Time interval specified in the methods above.
-	// This function will be defined in the Derived classes, where every method is applied.
-	// The first input is the right hand side of the ODE, also a class, and the second input is the file in which the solution will be saved.
+	/// Virtual function the solves the ODE with initial conditions, Time interval, and number of steps specified in the methods of "AbstactOdeSolver".
+	/// The first input is the right hand side of the ODE, also a class, and the second input is the file in which the solution will be saved.
 	virtual void SolveEquation(Righthandside* f,std::ostream& stream) = 0;
 };
 #endif

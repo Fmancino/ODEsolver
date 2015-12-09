@@ -1,9 +1,9 @@
-/* Test_SinCos.cpp
+/** Test_SinCos.cpp
  *
  * Created on: Dic, 2015
  *     Author: Francesco Mancino
  *Description: Testing the functionality of the SinCos class of functions, and clarifing how to use it.
- *             The solver that will be used is four step Adam BashForth.
+ *             The solver that will be used is mainly four step Adam BashForth. One of the solution will be tried with Backward Euler to see if the derivative is correct.
  */
 
 
@@ -90,13 +90,40 @@ int main() {
 	if (SinCosSolutionFile.is_open())
 	{
 	pSolver->SolveEquation(SineCosine,SinCosSolutionFile);
-	CosSolutionFile.close();
+	SinCosSolutionFile.close();
 	}
 	else
 	{
 	std::cout << "Couldn't open solution_SinCos.dat. Aborting." << std::endl;
 	return 1;
 	}
+
+
+	// ---------- Sin+Cos-------------- With backward Euler.
+
+	//Create e new Backward Euler solver:
+	pSolver = new BackwardEulerSolver;
+
+	// Setting its initial conditions:
+	pSolver->SetInitialValue(initialValue);
+	pSolver->SetTimeInterval(initialTime, finalTime);
+	pSolver->SetNumberSteps(numbersteps);
+
+	// Opening a file in which the solutions can be saved:
+	std::ofstream SinCosBSolutionFile("solution_SinCos_Backward.dat");
+
+	//Running the solver, if the solution file is open.
+	if (SinCosBSolutionFile.is_open())
+	{
+	pSolver->SolveEquation(SineCosine,SinCosBSolutionFile);
+	SinCosBSolutionFile.close();
+	}
+	else
+	{
+	std::cout << "Couldn't open solution_SinCos_Backward.dat. Aborting." << std::endl;
+	return 1;
+	}
+
 
 
 	std::cout << "Program executed correctly." << std::endl;

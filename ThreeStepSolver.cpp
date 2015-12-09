@@ -44,7 +44,7 @@ void ThreeStepSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 	t_prev2=t_prev1+h;
 	stream << t_prev2 << " " << y_prev2 << "\n"; //One iteration of Euler forward to find a second initial value
 
-	y_prev3 = y_prev2 + h * (f->value(y_prev2,t_prev2)*3/2 - f->value(y_prev1,t_prev1)/2);
+	y_prev3 = y_prev2 + h * (f->value(y_prev2,t_prev2) * 3/2 - f->value(y_prev1,t_prev1) / 2);
 	t_prev3=t_prev2+h;
 	stream << t_prev3 << " " << y_prev3 << "\n"; //One iteration of Two steps Adam Bashworts to find a third initial value
 
@@ -52,7 +52,7 @@ void ThreeStepSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 	for (int i=3; i <=n_steps; i++)
 	{
 		//One iteration of Three Steps Adam Bashword:
-		y_next = y_prev3 + h * (f->value(y_prev3,t_prev3)*23/12-f->value(y_prev2,t_prev2)*4/3 + f->value(y_prev1,t_prev1)*5/12);
+		y_next = y_prev3 + h * (f->value(y_prev3,t_prev3) * 23/12 - f->value(y_prev2,t_prev2) * 4/3 + f->value(y_prev1,t_prev1) * 5/12);
 		t_next=t_prev3+h;
 
 		stream << t_next << " " << y_next << "\n"; //Printing values to file

@@ -1,10 +1,13 @@
-/*
+/**
  * Polynomial.hpp
+ *
  * Created on: Dic, 2015
+ *
  *     Author: Francesco Mancino
+ *
  *Description: Derived class from Righthandside. Allow the user to specify a polynomial of grade 2 up to 4,
- *Description: in the form: a+b*x+c*x^2+d*x^3+e*x^4.
- *Description: The choice is given as to have int or double values for the coefficients with the the use of a template.
+ *			   in the form: a+b*x+c*x^2+d*x^3+e*x^4.
+ *			   The choice is given as to have int or double values for the coefficients with the the use of a template.
  */
 
 #ifndef POLYNOMIALHEADERDEF
@@ -33,7 +36,8 @@ template <class T> class Polynomial: public Righthandside
 	~Polynomial() //Default destructor
 	{}
 
-    Polynomial(T a1,T b1,T c1) //Constructor for a polynomial of grade 2: a+b*x+c*x^2
+	/// Constructor for a polynomial of grade 2: a+b*x+c*x^2
+    Polynomial(T a1,T b1,T c1)
 	{
     	SetGradientInfo(true);
 		a=a1;
@@ -43,7 +47,8 @@ template <class T> class Polynomial: public Righthandside
 		e=0;
 	}
 
-    Polynomial(T a1,T b1,T c1,T d1) //Constructor for a polynomial of grade 3: a+b*x+c*x^2+d*x^3
+    /// Constructor for a polynomial of grade 3: a+b*x+c*x^2+d*x^3
+    Polynomial(T a1,T b1,T c1,T d1)
     {
     	SetGradientInfo(true);
     	a=a1;
@@ -53,7 +58,8 @@ template <class T> class Polynomial: public Righthandside
     	e=0;
     }
 
-    Polynomial(T a1,T b1,T c1,T d1, T e1) //Constructor for a polynomial of grade 4: a+b*x+c*x^2+d*x^3+e*x^4
+    /// Constructor for a polynomial of grade 4: a+b*x+c*x^2+d*x^3+e*x^4
+    Polynomial(T a1,T b1,T c1,T d1, T e1)
     {
     	SetGradientInfo(true);
     	a=a1;

@@ -1,0 +1,46 @@
+\hypertarget{class_polynomial}{}\section{Polynomial$<$ T $>$ Class Template Reference}
+\label{class_polynomial}\index{Polynomial$<$ T $>$@{Polynomial$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Polynomial.\+hpp$>$}
+
+Inheritance diagram for Polynomial$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_polynomial}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_polynomial_a6b42d7b39422dac0a92b26a090bda215}{}\hyperlink{class_polynomial_a6b42d7b39422dac0a92b26a090bda215}{Polynomial} (T a1, T b1, T c1)\label{class_polynomial_a6b42d7b39422dac0a92b26a090bda215}
+
+\begin{DoxyCompactList}\small\item\em Constructor for a polynomial of grade 2\+: a+b$\ast$x+c$\ast$x$^\wedge$2. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_a6d62fec5c43fe16ae174c43ae4c7b9ed}{}\hyperlink{class_polynomial_a6d62fec5c43fe16ae174c43ae4c7b9ed}{Polynomial} (T a1, T b1, T c1, T d1)\label{class_polynomial_a6d62fec5c43fe16ae174c43ae4c7b9ed}
+
+\begin{DoxyCompactList}\small\item\em Constructor for a polynomial of grade 3\+: a+b$\ast$x+c$\ast$x$^\wedge$2+d$\ast$x$^\wedge$3. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_a3f959f3ca97a53a2d8a07e2db5153cc9}{}\hyperlink{class_polynomial_a3f959f3ca97a53a2d8a07e2db5153cc9}{Polynomial} (T a1, T b1, T c1, T d1, T e1)\label{class_polynomial_a3f959f3ca97a53a2d8a07e2db5153cc9}
+
+\begin{DoxyCompactList}\small\item\em Constructor for a polynomial of grade 4\+: a+b$\ast$x+c$\ast$x$^\wedge$2+d$\ast$x$^\wedge$3+e$\ast$x$^\wedge$4. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_a31e8324c085875a18a39cdf67468fe69}{}virtual double \hyperlink{class_polynomial_a31e8324c085875a18a39cdf67468fe69}{value} (double y, double t) const \label{class_polynomial_a31e8324c085875a18a39cdf67468fe69}
+
+\begin{DoxyCompactList}\small\item\em Virtual function to get the value of the function on the right hand side, f(y,t) for a specific y and t. \end{DoxyCompactList}\item 
+\hypertarget{class_polynomial_a55c6a16f0e4ba0be54c8368cbffba28f}{}virtual double \hyperlink{class_polynomial_a55c6a16f0e4ba0be54c8368cbffba28f}{gradient} (double y, double t) const \label{class_polynomial_a55c6a16f0e4ba0be54c8368cbffba28f}
+
+\begin{DoxyCompactList}\small\item\em Virtual function to get the value gradient of the function on the right hand side, f\textquotesingle{}(y,t) for a specific y and t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class Polynomial$<$ T $>$}
+
+\hyperlink{_polynomial_8hpp_source}{Polynomial.\+hpp}
+
+Created on\+: Dic, 2015 \begin{DoxyVerb}Author: Francesco Mancino
+\end{DoxyVerb}
+
+
+Description\+: Derived class from \hyperlink{class_righthandside}{Righthandside}. Allow the user to specify a polynomial of grade 2 up to 4, in the form\+: a+b$\ast$x+c$\ast$x$^\wedge$2+d$\ast$x$^\wedge$3+e$\ast$x$^\wedge$4. The choice is given as to have int or double values for the coefficients with the the use of a template. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macair/\+Documents/projectode/Polynomial.\+hpp\end{DoxyCompactItemize}

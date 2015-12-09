@@ -1,0 +1,59 @@
+\hypertarget{class_forward_euler_solver}{}\section{Forward\+Euler\+Solver Class Reference}
+\label{class_forward_euler_solver}\index{Forward\+Euler\+Solver@{Forward\+Euler\+Solver}}
+
+
+{\ttfamily \#include $<$Forward\+Euler\+Solver.\+hpp$>$}
+
+Inheritance diagram for Forward\+Euler\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_forward_euler_solver}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_forward_euler_solver_a56271b4e9c08874b64e20981f4004294}{Forward\+Euler\+Solver} ()
+\item 
+virtual void \hyperlink{class_forward_euler_solver_af1d0ccddde281d136a99362743c80fe7}{Solve\+Equation} (\hyperlink{class_righthandside}{Righthandside} $\ast$f, std\+::ostream \&stream)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{_forward_euler_solver_8hpp_source}{Forward\+Eulersolver.\+hpp}
+
+Created on\+: Dic, 2015 \begin{DoxyVerb}Author: Francesco Mancino
+\end{DoxyVerb}
+
+
+Description\+: Class that implements Forward Eulers method to solve a O\+D\+E of the form\+: dy/dt=f(y,t). It is derived from the abstract class \hyperlink{class_abstract_ode_solver}{Abstract\+Ode\+Solver}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_forward_euler_solver_a56271b4e9c08874b64e20981f4004294}{}\index{Forward\+Euler\+Solver@{Forward\+Euler\+Solver}!Forward\+Euler\+Solver@{Forward\+Euler\+Solver}}
+\index{Forward\+Euler\+Solver@{Forward\+Euler\+Solver}!Forward\+Euler\+Solver@{Forward\+Euler\+Solver}}
+\subsubsection[{Forward\+Euler\+Solver()}]{\setlength{\rightskip}{0pt plus 5cm}Forward\+Euler\+Solver\+::\+Forward\+Euler\+Solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_forward_euler_solver_a56271b4e9c08874b64e20981f4004294}
+\hyperlink{_forward_euler_solver_8hpp_source}{Forward\+Eulersolver.\+hpp} Created on\+: Dic, 2015 Author\+: Francesco Mancino Description\+: Class that implements Forward Eulers method to solve a O\+D\+E of the form\+: dy/dt=f(y,t). It is derived from the abstract class \hyperlink{class_abstract_ode_solver}{Abstract\+Ode\+Solver}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_forward_euler_solver_af1d0ccddde281d136a99362743c80fe7}{}\index{Forward\+Euler\+Solver@{Forward\+Euler\+Solver}!Solve\+Equation@{Solve\+Equation}}
+\index{Solve\+Equation@{Solve\+Equation}!Forward\+Euler\+Solver@{Forward\+Euler\+Solver}}
+\subsubsection[{Solve\+Equation(\+Righthandside $\ast$f, std\+::ostream \&stream)}]{\setlength{\rightskip}{0pt plus 5cm}void Forward\+Euler\+Solver\+::\+Solve\+Equation (
+\begin{DoxyParamCaption}
+\item[{{\bf Righthandside} $\ast$}]{f, }
+\item[{std\+::ostream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_forward_euler_solver_af1d0ccddde281d136a99362743c80fe7}
+Virtual function the solves the O\+D\+E with initial conditions, Time interval, and number of steps specified in the methods of \char`\"{}\+Abstact\+Ode\+Solver\char`\"{}. The first input is the right hand side of the O\+D\+E, also a class, and the second input is the file in which the solution will be saved. 
+
+Implements \hyperlink{class_abstract_ode_solver_ad7d73b20e9ce5c8f3aab1a15bebe3e4c}{Abstract\+Ode\+Solver}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macair/\+Documents/projectode/Forward\+Euler\+Solver.\+hpp\item 
+/\+Users/macair/\+Documents/projectode/Forward\+Euler\+Solver.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,47 @@
+\hypertarget{class_two_step_solver}{}\section{Two\+Step\+Solver Class Reference}
+\label{class_two_step_solver}\index{Two\+Step\+Solver@{Two\+Step\+Solver}}
+
+
+{\ttfamily \#include $<$Two\+Step\+Solver.\+hpp$>$}
+
+Inheritance diagram for Two\+Step\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_two_step_solver}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_two_step_solver_ae52e8c2313e8f9fa617d13b7ed83284e}{Solve\+Equation} (\hyperlink{class_righthandside}{Righthandside} $\ast$f, std\+::ostream \&stream)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{_two_step_solver_8hpp_source}{Two\+Step\+Solver.\+hpp}
+
+Created on\+: Dic, 2015 \begin{DoxyVerb}Author: Francesco Mancino
+\end{DoxyVerb}
+
+
+Description\+: Class that implements Two Step Adam Bashworts Method to solve a O\+D\+E of the form\+: dy/dt=f(y,t). It is derived from the abstract class \hyperlink{class_abstract_ode_solver}{Abstract\+Ode\+Solver}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_two_step_solver_ae52e8c2313e8f9fa617d13b7ed83284e}{}\index{Two\+Step\+Solver@{Two\+Step\+Solver}!Solve\+Equation@{Solve\+Equation}}
+\index{Solve\+Equation@{Solve\+Equation}!Two\+Step\+Solver@{Two\+Step\+Solver}}
+\subsubsection[{Solve\+Equation(\+Righthandside $\ast$f, std\+::ostream \&stream)}]{\setlength{\rightskip}{0pt plus 5cm}void Two\+Step\+Solver\+::\+Solve\+Equation (
+\begin{DoxyParamCaption}
+\item[{{\bf Righthandside} $\ast$}]{f, }
+\item[{std\+::ostream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_two_step_solver_ae52e8c2313e8f9fa617d13b7ed83284e}
+Virtual function the solves the O\+D\+E with initial conditions, Time interval, and number of steps specified in the methods of \char`\"{}\+Abstact\+Ode\+Solver\char`\"{}. The first input is the right hand side of the O\+D\+E, also a class, and the second input is the file in which the solution will be saved. 
+
+Implements \hyperlink{class_abstract_ode_solver_ad7d73b20e9ce5c8f3aab1a15bebe3e4c}{Abstract\+Ode\+Solver}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macair/\+Documents/projectode/Two\+Step\+Solver.\+hpp\item 
+/\+Users/macair/\+Documents/projectode/Two\+Step\+Solver.\+cpp\end{DoxyCompactItemize}

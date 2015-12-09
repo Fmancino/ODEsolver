@@ -1,0 +1,42 @@
+\hypertarget{class_generic_function}{}\section{Generic\+Function Class Reference}
+\label{class_generic_function}\index{Generic\+Function@{Generic\+Function}}
+
+
+{\ttfamily \#include $<$Generic\+Function.\+hpp$>$}
+
+Inheritance diagram for Generic\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_generic_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_generic_function_a74e9aaff47e0bba83c0d0ad3f60b1ec5}{}\hyperlink{class_generic_function_a74e9aaff47e0bba83c0d0ad3f60b1ec5}{Generic\+Function} (double($\ast$f)(double y, double t))\label{class_generic_function_a74e9aaff47e0bba83c0d0ad3f60b1ec5}
+
+\begin{DoxyCompactList}\small\item\em Constructor if you have only the function. \end{DoxyCompactList}\item 
+\hypertarget{class_generic_function_a251276ed4f9512a284257e3965a18207}{}\hyperlink{class_generic_function_a251276ed4f9512a284257e3965a18207}{Generic\+Function} (double($\ast$f)(double y, double t), double($\ast$g)(double y, double t))\label{class_generic_function_a251276ed4f9512a284257e3965a18207}
+
+\begin{DoxyCompactList}\small\item\em Constructor if you have function and gradient. \end{DoxyCompactList}\item 
+\hypertarget{class_generic_function_ab6ff4fd2c397f0d57c96903277037c7e}{}virtual double \hyperlink{class_generic_function_ab6ff4fd2c397f0d57c96903277037c7e}{value} (double y, double t) const \label{class_generic_function_ab6ff4fd2c397f0d57c96903277037c7e}
+
+\begin{DoxyCompactList}\small\item\em Virtual function to get the value of the function on the right hand side, f(y,t) for a specific y and t. \end{DoxyCompactList}\item 
+\hypertarget{class_generic_function_afe74d7deb46708999a9d01514589f16b}{}virtual double \hyperlink{class_generic_function_afe74d7deb46708999a9d01514589f16b}{gradient} (double y, double t) const \label{class_generic_function_afe74d7deb46708999a9d01514589f16b}
+
+\begin{DoxyCompactList}\small\item\em Virtual function to get the value gradient of the function on the right hand side, f\textquotesingle{}(y,t) for a specific y and t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{_generic_function_8hpp_source}{Generic\+Function.\+hpp}
+
+Created on\+: Dic, 2015 \begin{DoxyVerb}Author: Francesco Mancino
+\end{DoxyVerb}
+
+
+Description\+: Derived class from \hyperlink{class_righthandside}{Righthandside}. Allow the user to specify a generic function and its gradient, with the use of function pointers. The choice is given as to whether to specify the gradient or not, thought the use of two different constructors. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macair/\+Documents/projectode/Generic\+Function.\+hpp\item 
+/\+Users/macair/\+Documents/projectode/Generic\+Function.\+cpp\end{DoxyCompactItemize}

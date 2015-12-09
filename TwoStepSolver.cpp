@@ -30,7 +30,7 @@ void TwoStepSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 	T0 = GetInitialTime();
 	T_final = GetFinalTime();
 	n_steps =  GetNumberSteps();
-	h=(T_final-T0)/n_steps; // Stepsize
+	h=(T_final - T0) / n_steps; // Stepsize
 
 	y_prev1=GetInitialValue();
 	t_prev1=T0;
@@ -38,14 +38,14 @@ void TwoStepSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 	stream << t_prev1 << " " << y_prev1 << "\n"; //Printing initial values to file
 
 	y_prev2=y_prev1 + h * f->value(y_prev1,t_prev1);
-	t_prev2=t_prev1+h;
+	t_prev2=t_prev1 + h;
 	stream << t_prev2 << " " << y_prev2 << "\n"; //One iteration of Euler forward to find a second initial value
 
 	//Implementing Two Steps Adam Bashword:
 	for (int i=2; i <=n_steps; i++)
 	{
 		// Two Steps Adam Bashword iteration:
-		y_next = y_prev2 + h * (f->value(y_prev2,t_prev2)*3/2 - f->value(y_prev1,t_prev1)/2);
+		y_next = y_prev2 + h * (f->value(y_prev2,t_prev2) * 3/2 - f->value(y_prev1,t_prev1) / 2);
 
 		t_next=t_prev2+h; //Updating Time
 

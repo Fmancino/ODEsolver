@@ -1,15 +1,15 @@
-/* Test_logistic_extinction.cpp
+/**  Test_logistic_extinction.cpp
  *
  * Created on: Dic, 2015
  *     Author: Francesco Mancino
- *Description: The Logistic equation with extinction threshold is used to test the functionality of the different solvers
+ *Description: The Logistic equation with extinction threshold is used to test the functionality of all the different solvers,
  *			   and the polynomial class of functions.
- *	 		   The equation is usually be written like this: dy/dt=-r(1-y/T)(1-y/K)y which is a polynomial of grade 3: dy/dt=-r/(TK)*y^3+(r/T+r/K)*y^2-ry
+ *	 		   The equation is usually written like this: dy/dt=-r(1-y/T)(1-y/K)y which is a polynomial of grade 3: dy/dt=-r/(TK)*y^3+(r/T+r/K)*y^2-ry
  *			   T is the extinction limit for a population (under which the population will go extinct), K is the maximum number of individual that can be sustained and r the growt rate.
  *			   This equation is very good for testing the functionalities because the solution is well known: for a starting point under T the solution will converge to 0,
  *			   for a starting point over T the solution will converge to K and for the starting point T the solution will stay at T.
  *
- *			   This is a good opportunity to see the functionalities of the library.
+ *			   The test resulted successful and the behavior of the function was similar for all the solver when using reasonable starting values.
  */
 
 
@@ -20,6 +20,11 @@
 
 using namespace std;
 
+double fRhs(double y, double t)  // Defining only the function to test the functionality of the secant method, and show how to use it.
+{
+	double T=1.0, K=2.0 , r=1.0;
+	return -r*(1-y/T)*(1-y/K)*y;
+}
 
 int main() {
 
@@ -30,7 +35,7 @@ int main() {
 	double initialTime = 0.0;
 	double finalTime = 10.0;
 	double initialValue = 5;
-	int numbersteps = 1000;
+	int numbersteps = 100;
 
 	// Creating the Right hand side equation, using the Polynomial class.
 	Righthandside * poly;
@@ -136,6 +141,29 @@ int main() {
 	return 1;
 	}
 
+	//---- Create e new Fourth order Runge Kutta solver:  --------------------------------------------------------------------------------
+	pSolver = new RungeKutta4Solver;
+
+	// Setting its initial conditions:
+	pSolver->SetInitialValue(initialValue);
+	pSolver->SetTimeInterval(initialTime, finalTime);
+	pSolver->SetNumberSteps(numbersteps);
+
+	// Opening a file in which the solutions can be saved:
+	std::ofstream RungeSolutionFile("solution_Runge.dat");
+
+	//Running the solver, if the solution file is open.
+	if (RungeSolutionFile.is_open())
+	{
+	pSolver->SolveEquation(poly,RungeSolutionFile);
+	RungeSolutionFile.close();
+	}
+	else
+	{
+	std::cout << "Couldn't open solution_Runge.dat. Aborting." << std::endl;
+	return 1;
+	}
+
 	//---- Create e new Backward Euler solver:  --------------------------------------------------------------------------------
 	pSolver = new BackwardEulerSolver;
 
@@ -156,6 +184,29 @@ int main() {
 	else
 	{
 	std::cout << "Couldn't open solution_BackwardEuler.dat. Aborting." << std::endl;
+	return 1;
+	}
+
+	//---- Testing the functionality of the secant method---------------------------
+
+	//Creating the same function using the generic function class, but without specifing the gradient.
+	Righthandside *f;
+	f=new GenericFunction (fRhs);
+
+
+
+	// Opening a file in which the solutions can be saved:
+	std::ofstream BackwardSecantSolutionFile("solution_BackwardEulerSecant.dat");
+
+	//Running the solver, if the solution file is open.
+	if (BackwardSecantSolutionFile.is_open())
+	{
+	pSolver->SolveEquation(poly,BackwardSecantSolutionFile);
+	BackwardSecantSolutionFile.close();
+	}
+	else
+	{
+	std::cout << "Couldn't open solution_BackwardEulerSecant.dat. Aborting." << std::endl;
 	return 1;
 	}
 

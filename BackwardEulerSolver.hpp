@@ -1,7 +1,10 @@
-/*
+/**
  * BackwardEulersolver.cpp
+ *
  * Created on: Dic, 2015
+ *
  *     Author: Francesco Mancino
+ *
  *Description: Class that implements Backward Eulers method to solve a ODE of the form: dy/dt=f(y,t).
  * It is derived from the abstract class AbstractOdeSolver.
  * To Solve the equation arising due to the fact that Backward Eulers method is implicit,

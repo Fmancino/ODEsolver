@@ -1,0 +1,47 @@
+\hypertarget{class_four_step_solver}{}\section{Four\+Step\+Solver Class Reference}
+\label{class_four_step_solver}\index{Four\+Step\+Solver@{Four\+Step\+Solver}}
+
+
+{\ttfamily \#include $<$Four\+Step\+Solver.\+hpp$>$}
+
+Inheritance diagram for Four\+Step\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_four_step_solver}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_four_step_solver_a78b7b6af19731e904c4cdd31b5641aa2}{Solve\+Equation} (\hyperlink{class_righthandside}{Righthandside} $\ast$f, std\+::ostream \&stream)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Four\+Step\+Solver.\+cpp
+
+Created on\+: Dic, 2015 \begin{DoxyVerb}Author: Francesco Mancino
+\end{DoxyVerb}
+
+
+Description\+: Class that implements Four Step Adam Bashworts Method to solve a O\+D\+E of the form\+: dy/dt=f(y,t). It is derived from the abstract class \hyperlink{class_abstract_ode_solver}{Abstract\+Ode\+Solver}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_four_step_solver_a78b7b6af19731e904c4cdd31b5641aa2}{}\index{Four\+Step\+Solver@{Four\+Step\+Solver}!Solve\+Equation@{Solve\+Equation}}
+\index{Solve\+Equation@{Solve\+Equation}!Four\+Step\+Solver@{Four\+Step\+Solver}}
+\subsubsection[{Solve\+Equation(\+Righthandside $\ast$f, std\+::ostream \&stream)}]{\setlength{\rightskip}{0pt plus 5cm}void Four\+Step\+Solver\+::\+Solve\+Equation (
+\begin{DoxyParamCaption}
+\item[{{\bf Righthandside} $\ast$}]{f, }
+\item[{std\+::ostream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_four_step_solver_a78b7b6af19731e904c4cdd31b5641aa2}
+Virtual function the solves the O\+D\+E with initial conditions, Time interval, and number of steps specified in the methods of \char`\"{}\+Abstact\+Ode\+Solver\char`\"{}. The first input is the right hand side of the O\+D\+E, also a class, and the second input is the file in which the solution will be saved. 
+
+Implements \hyperlink{class_abstract_ode_solver_ad7d73b20e9ce5c8f3aab1a15bebe3e4c}{Abstract\+Ode\+Solver}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macair/\+Documents/projectode/Four\+Step\+Solver.\+hpp\item 
+/\+Users/macair/\+Documents/projectode/Four\+Step\+Solver.\+cpp\end{DoxyCompactItemize}

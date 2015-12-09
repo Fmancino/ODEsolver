@@ -38,14 +38,14 @@ void FourStepSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 	stream << t_prev1 << " " << y_prev1 << "\n"; //Printing initial values to file
 
 	y_prev2=y_prev1 + h * f->value(y_prev1,t_prev1);
-	t_prev2=t_prev1+h;
+	t_prev2=t_prev1 + h;
 	stream << t_prev2 << " " << y_prev2 << "\n"; //One iteration of Euler forward to find a second initial value
 
-	y_prev3 = y_prev2 + h * (f->value(y_prev2,t_prev2)*3/2 - f->value(y_prev1,t_prev1)/2);
+	y_prev3 = y_prev2 + h * (f->value(y_prev2,t_prev2) * 3/2 - f->value(y_prev1,t_prev1) / 2);
 	t_prev3=t_prev2+h;
 	stream << t_prev3 << " " << y_prev3 << "\n"; //One iteration of Two steps Adam Bashworts to find a third initial value
 
-	y_prev4 = y_prev3 + h * (f->value(y_prev3,t_prev3)*23/12-f->value(y_prev2,t_prev2)*4/3 + f->value(y_prev1,t_prev1)*5/12);
+	y_prev4 = y_prev3 + h * (f->value(y_prev3,t_prev3) * 23/12 - f->value(y_prev2,t_prev2) * 4/3 + f->value(y_prev1,t_prev1) * 5/12);
 	t_prev4 = t_prev3 + h;
 	stream << t_prev4 << " " << y_prev4 << "\n"; //One iteration of Three steps Adam Bashworts to find a fourth initial value
 
@@ -53,7 +53,7 @@ void FourStepSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 	for (int i=4; i <=n_steps; i++)
 	{
 		// Four Steps Adam Bashword iteration:
-		y_next = y_prev4 + h * (f->value(y_prev4,t_prev4)*55/24-f->value(y_prev3,t_prev3)*59/24+f->value(y_prev2,t_prev2)*37/24- f->value(y_prev1,t_prev1)*3/8);
+		y_next = y_prev4 + h * (f->value(y_prev4,t_prev4) * 55/24 - f->value(y_prev3,t_prev3) * 59/24 + f->value(y_prev2,t_prev2) * 37/24 - f->value(y_prev1,t_prev1) * 3/8);
 
 		t_next=t_prev4+h; //Updating Time
 
