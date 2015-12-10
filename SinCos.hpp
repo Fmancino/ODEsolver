@@ -8,6 +8,8 @@
  *Description: Derived class from Righthandside. Contructs a function of the type: f(y,t)=a*sin(c*y)+b*cos(d*y)
  */
 
+/// \brief Class that allows the user to specify a function of the type f(y,t)=a*sin(c*y)+b*cos(d*y) for the right hand side of the ODE.
+
 #ifndef SINCOSHEADERDEF
 #define SINCOSHEADERDEF
 

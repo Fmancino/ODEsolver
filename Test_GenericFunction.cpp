@@ -5,8 +5,8 @@
  *Description: We will test the funtionality of the "GenericFunction" class.
  * 			   To do that a simple logistic function will be used, with the addiction of a time dependent component (which will go to zero as time goes to infinity: for the population model, it could represent a resource that finishes).
  * 			   The expected result is a fast growing rate in the beginning, and then a slow descent towards the stable value 1.
- * 			   Due to the time dependent part this function cannot be modelled with the polynomial class, therefore it has to be introduced in the program with the "GenericFunction" class.
- * 			   The result will be calculated using the runge-kutta solver, the backward-euler solver and the backward euler solver without specifying the gradient.
+ * 			   Due to the time dependent part this function cannot be modelled using the polynomial class, therefore it has to be introduced in the program with the "GenericFunction" class.
+ * 			   The result will be calculated using the runge-kutta solver, the backward-euler solver and the backward euler solver without specifying the gradient (secant method).
  * 			   The result behaves as expected for all three solvers, thus suggesting that there are no major mistakes.
  *
 */
@@ -14,7 +14,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "ODESolver.hpp"
+#include "ODESolver.hpp" // Including the library of the ODE solver.
 #include <cmath>
 
 using namespace std;
@@ -39,7 +39,7 @@ int main() {
 	double initialValue = 0.1;
 	double numbersteps = 10000;
 
-	//Initializint the Solver:
+	//Initializing the Solver:
     AbstractOdeSolver* pSolver = 0;
 
 	//---- Create e new Fourth order Runge Kutta solver:  --------------------------------------------------------------------------------

@@ -90,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract Base class for the family of methods for solving ODE of the form dy/dt=f(y,t).  
+ <a href="class_abstract_ode_solver.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_abstract_ode_solver_8hpp_source.html">AbstractOdeSolver.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AbstractOdeSolver:</div>
@@ -97,12 +100,12 @@ Inheritance diagram for AbstractOdeSolver:</div>
  <div class="center">
   <img src="class_abstract_ode_solver.png" usemap="#AbstractOdeSolver_map" alt=""/>
   <map id="AbstractOdeSolver_map" name="AbstractOdeSolver_map">
-<area href="class_backward_euler_solver.html" alt="BackwardEulerSolver" shape="rect" coords="0,56,135,80"/>
-<area href="class_forward_euler_solver.html" alt="ForwardEulerSolver" shape="rect" coords="145,56,280,80"/>
-<area href="class_four_step_solver.html" alt="FourStepSolver" shape="rect" coords="290,56,425,80"/>
-<area href="class_runge_kutta4_solver.html" alt="RungeKutta4Solver" shape="rect" coords="435,56,570,80"/>
-<area href="class_three_step_solver.html" alt="ThreeStepSolver" shape="rect" coords="580,56,715,80"/>
-<area href="class_two_step_solver.html" alt="TwoStepSolver" shape="rect" coords="725,56,860,80"/>
+<area href="class_backward_euler_solver.html" title="Class that implements Backward Eulers method to solve a ODE of the form: dy/dt=f(y,t). " alt="BackwardEulerSolver" shape="rect" coords="0,56,135,80"/>
+<area href="class_forward_euler_solver.html" title="Class that implements Forward Eulers method to solve a ODE of the form: dy/dt=f(y,t). " alt="ForwardEulerSolver" shape="rect" coords="145,56,280,80"/>
+<area href="class_four_step_solver.html" title="Class that implements Four Step Adam Bashworts Method to solve a ODE of the form: dy/dt=f(y..." alt="FourStepSolver" shape="rect" coords="290,56,425,80"/>
+<area href="class_runge_kutta4_solver.html" title="Class that implements 4th order Runge-Kutta method to solve a ODE of the form: dy/dt=f(y,t). " alt="RungeKutta4Solver" shape="rect" coords="435,56,570,80"/>
+<area href="class_three_step_solver.html" title="Class that implements Four Three Adam Bashworts Method to solve a ODE of the form: dy/dt=f(y..." alt="ThreeStepSolver" shape="rect" coords="580,56,715,80"/>
+<area href="class_two_step_solver.html" title="Class that implements Two Step Adam Bashworts Method to solve a ODE of the form: dy/dt=f(y,t). " alt="TwoStepSolver" shape="rect" coords="725,56,860,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -136,7 +139,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>GetInitialValue</b>
 <tr class="separator:ad7d73b20e9ce5c8f3aab1a15bebe3e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>AbstracOdeSolver.cpp</p>
+<div class="textblock"><p>Abstract Base class for the family of methods for solving ODE of the form dy/dt=f(y,t). </p>
+<p>AbstracOdeSolver.cpp</p>
 <p>Created on: Dic, 2015 </p><pre class="fragment">Author: Francesco Mancino
 </pre><p>Description: Abstract Base class for the family of methods for solving ODE of the form dy/dt=f(y,t). The possible methods are defined as derived classes from this class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>

@@ -88,28 +88,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef TWOSTEPSOLVERHEADERDEF</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define TWOSTEPSOLVERHEADERDEF</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;AbstractOdeSolver.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;Righthandside.hpp&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_two_step_solver.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_two_step_solver.html">TwoStepSolver</a>: <span class="keyword">public</span> <a class="code" href="class_abstract_ode_solver.html">AbstractOdeSolver</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_two_step_solver.html">TwoStepSolver</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_two_step_solver.html">TwoStepSolver</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_two_step_solver.html#ae52e8c2313e8f9fa617d13b7ed83284e">SolveEquation</a>(<a class="code" href="class_righthandside.html">Righthandside</a>* f,std::ostream&amp; stream);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef TWOSTEPSOLVERHEADERDEF</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define TWOSTEPSOLVERHEADERDEF</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;AbstractOdeSolver.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;Righthandside.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_two_step_solver.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_two_step_solver.html">TwoStepSolver</a>: <span class="keyword">public</span> <a class="code" href="class_abstract_ode_solver.html">AbstractOdeSolver</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_two_step_solver.html">TwoStepSolver</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_two_step_solver.html">TwoStepSolver</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_two_step_solver.html#ae52e8c2313e8f9fa617d13b7ed83284e">SolveEquation</a>(<a class="code" href="class_righthandside.html">Righthandside</a>* f,std::ostream&amp; stream);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_two_step_solver_html_ae52e8c2313e8f9fa617d13b7ed83284e"><div class="ttname"><a href="class_two_step_solver.html#ae52e8c2313e8f9fa617d13b7ed83284e">TwoStepSolver::SolveEquation</a></div><div class="ttdeci">virtual void SolveEquation(Righthandside *f, std::ostream &amp;stream)</div><div class="ttdef"><b>Definition:</b> TwoStepSolver.cpp:21</div></div>
-<div class="ttc" id="class_righthandside_html"><div class="ttname"><a href="class_righthandside.html">Righthandside</a></div><div class="ttdef"><b>Definition:</b> Righthandside.hpp:16</div></div>
-<div class="ttc" id="class_abstract_ode_solver_html"><div class="ttname"><a href="class_abstract_ode_solver.html">AbstractOdeSolver</a></div><div class="ttdef"><b>Definition:</b> AbstractOdeSolver.hpp:18</div></div>
-<div class="ttc" id="class_two_step_solver_html"><div class="ttname"><a href="class_two_step_solver.html">TwoStepSolver</a></div><div class="ttdef"><b>Definition:</b> TwoStepSolver.hpp:19</div></div>
+<div class="ttc" id="class_righthandside_html"><div class="ttname"><a href="class_righthandside.html">Righthandside</a></div><div class="ttdoc">Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y...</div><div class="ttdef"><b>Definition:</b> Righthandside.hpp:17</div></div>
+<div class="ttc" id="class_abstract_ode_solver_html"><div class="ttname"><a href="class_abstract_ode_solver.html">AbstractOdeSolver</a></div><div class="ttdoc">Abstract Base class for the family of methods for solving ODE of the form dy/dt=f(y,t). </div><div class="ttdef"><b>Definition:</b> AbstractOdeSolver.hpp:23</div></div>
+<div class="ttc" id="class_two_step_solver_html"><div class="ttname"><a href="class_two_step_solver.html">TwoStepSolver</a></div><div class="ttdoc">Class that implements Two Step Adam Bashworts Method to solve a ODE of the form: dy/dt=f(y,t). </div><div class="ttdef"><b>Definition:</b> TwoStepSolver.hpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

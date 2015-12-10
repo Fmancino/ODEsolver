@@ -10,6 +10,7 @@
  *			   The possible functions will be define as derived classes from this class.
  */
 
+/// \brief Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y,t).
 #ifndef RIGHTHANDSIDEDEF
 #define RIGHTHANDSIDEDEF
 

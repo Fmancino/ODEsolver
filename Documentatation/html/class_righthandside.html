@@ -90,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y,t).  
+ <a href="class_righthandside.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_righthandside_8hpp_source.html">Righthandside.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Righthandside:</div>
@@ -97,9 +100,9 @@ Inheritance diagram for Righthandside:</div>
  <div class="center">
   <img src="class_righthandside.png" usemap="#Righthandside_map" alt=""/>
   <map id="Righthandside_map" name="Righthandside_map">
-<area href="class_generic_function.html" alt="GenericFunction" shape="rect" coords="0,56,106,80"/>
-<area href="class_polynomial.html" alt="Polynomial&lt; T &gt;" shape="rect" coords="116,56,222,80"/>
-<area href="class_sin_cos.html" alt="SinCos&lt; T &gt;" shape="rect" coords="232,56,338,80"/>
+<area href="class_generic_function.html" title="Class that allows the user to specify a generic function and its gradient, with the use of function p..." alt="GenericFunction" shape="rect" coords="0,56,106,80"/>
+<area href="class_polynomial.html" title="Class that allows the user to specify a polynomial of grade 2 up to 4, in the form: a+b*x+c*x^2+d*x^3..." alt="Polynomial&lt; T &gt;" shape="rect" coords="116,56,222,80"/>
+<area href="class_sin_cos.html" title="Class that allows the user to specify a function of the type f(y,t)=a*sin(c*y)+b*cos(d*y) for the rig..." alt="SinCos&lt; T &gt;" shape="rect" coords="232,56,338,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -123,7 +126,8 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="separator:a39748896cba8f34c145b46235ff2ee1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="_righthandside_8hpp_source.html">Righthandside.hpp</a></p>
+<div class="textblock"><p>Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y,t). </p>
+<p><a class="el" href="_righthandside_8hpp_source.html">Righthandside.hpp</a></p>
 <p>Created on: Dic, 2015 </p><pre class="fragment">Author: Francesco Mancino
 </pre><p>Description: Abstract class which is the head of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y,t). The possible functions will be define as derived classes from this class. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>

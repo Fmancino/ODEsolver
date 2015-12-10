@@ -5,9 +5,11 @@
  *
  *     Author: Francesco Mancino
  *
- *Description: Derived class from Righthandside. Allow the user to specify a generic function and its gradient, with the use of function pointers.
+ *Description: Derived class from Righthandside. Allows the user to specify a generic function and its gradient, with the use of function pointers.
  *			   The choice is given as to whether to specify the gradient or not, thought the use of two different constructors.
  */
+
+/// \brief  Class that allows the user to specify a generic function and its gradient, with the use of function pointers, as the right hand side of the ODE.
 
 #ifndef GENERICFUNCTIONHEADERDEF
 #define GENERICFUNCTIONHEADERDEF

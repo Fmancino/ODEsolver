@@ -9,6 +9,8 @@
  * 			   It is derived from the abstract class AbstractOdeSolver.
  */
 
+/// \brief  Class that implements Two Step Adam Bashworts Method to solve a ODE of the form: dy/dt=f(y,t).
+
 #ifndef TWOSTEPSOLVERHEADERDEF
 #define TWOSTEPSOLVERHEADERDEF
 

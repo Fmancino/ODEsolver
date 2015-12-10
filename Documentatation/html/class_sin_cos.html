@@ -90,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Class that allows the user to specify a function of the type f(y,t)=a*sin(c*y)+b*cos(d*y) for the right hand side of the ODE.  
+ <a href="class_sin_cos.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_sin_cos_8hpp_source.html">SinCos.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SinCos&lt; T &gt;:</div>
@@ -97,7 +100,7 @@ Inheritance diagram for SinCos&lt; T &gt;:</div>
  <div class="center">
   <img src="class_sin_cos.png" usemap="#SinCos&lt; T &gt;_map" alt=""/>
   <map id="SinCos&lt; T &gt;_map" name="SinCos&lt; T &gt;_map">
-<area href="class_righthandside.html" alt="Righthandside" shape="rect" coords="0,0,91,24"/>
+<area href="class_righthandside.html" title="Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y..." alt="Righthandside" shape="rect" coords="0,0,91,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -105,7 +108,7 @@ Inheritance diagram for SinCos&lt; T &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3cac71427371707bdab285bdd397aa3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cac71427371707bdab285bdd397aa3d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sin_cos.html#a3cac71427371707bdab285bdd397aa3d">SinCos</a> (T a1)</td></tr>
-<tr class="memdesc:a3cac71427371707bdab285bdd397aa3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a sine function : a*sin(y) (for constructing a pure cosine function it is possible to call <a class="el" href="class_sin_cos.html">SinCos(0,1)</a>) <br /></td></tr>
+<tr class="memdesc:a3cac71427371707bdab285bdd397aa3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a sine function : a*sin(y) (for constructing a pure cosine function it is possible to call <a class="el" href="class_sin_cos.html" title="Class that allows the user to specify a function of the type f(y,t)=a*sin(c*y)+b*cos(d*y) for the rig...">SinCos(0,1)</a>) <br /></td></tr>
 <tr class="separator:a3cac71427371707bdab285bdd397aa3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e4afd2a47fa1375b101b2e439be409"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64e4afd2a47fa1375b101b2e439be409"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sin_cos.html#a64e4afd2a47fa1375b101b2e439be409">SinCos</a> (T a1, T b1)</td></tr>
@@ -137,9 +140,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="textblock"><h3>template&lt;class T&gt;<br />
 class SinCos&lt; T &gt;</h3>
 
+<p>Class that allows the user to specify a function of the type f(y,t)=a*sin(c*y)+b*cos(d*y) for the right hand side of the ODE. </p>
 <p><a class="el" href="_sin_cos_8hpp_source.html">SinCos.hpp</a></p>
 <p>Created on: Dic, 2015 </p><pre class="fragment">Author: Francesco Mancino
-</pre><p>Description: Derived class from <a class="el" href="class_righthandside.html">Righthandside</a>. Contructs a function of the type: f(y,t)=a*sin(c*y)+b*cos(d*y) </p>
+</pre><p>Description: Derived class from <a class="el" href="class_righthandside.html" title="Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y...">Righthandside</a>. Contructs a function of the type: f(y,t)=a*sin(c*y)+b*cos(d*y) </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/Users/macair/Documents/projectode/<a class="el" href="_sin_cos_8hpp_source.html">SinCos.hpp</a></li>
 </ul>

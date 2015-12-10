@@ -90,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Class that allows the user to specify a generic function and its gradient, with the use of function pointers, as the right hand side of the ODE.  
+ <a href="class_generic_function.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_generic_function_8hpp_source.html">GenericFunction.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GenericFunction:</div>
@@ -97,7 +100,7 @@ Inheritance diagram for GenericFunction:</div>
  <div class="center">
   <img src="class_generic_function.png" usemap="#GenericFunction_map" alt=""/>
   <map id="GenericFunction_map" name="GenericFunction_map">
-<area href="class_righthandside.html" alt="Righthandside" shape="rect" coords="0,0,106,24"/>
+<area href="class_righthandside.html" title="Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y..." alt="Righthandside" shape="rect" coords="0,0,106,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -130,9 +133,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a789dc740ce5310a1ee78ca5ff19d965e inherit pub_methods_class_righthandside"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="_generic_function_8hpp_source.html">GenericFunction.hpp</a></p>
+<div class="textblock"><p>Class that allows the user to specify a generic function and its gradient, with the use of function pointers, as the right hand side of the ODE. </p>
+<p><a class="el" href="_generic_function_8hpp_source.html">GenericFunction.hpp</a></p>
 <p>Created on: Dic, 2015 </p><pre class="fragment">Author: Francesco Mancino
-</pre><p>Description: Derived class from <a class="el" href="class_righthandside.html">Righthandside</a>. Allow the user to specify a generic function and its gradient, with the use of function pointers. The choice is given as to whether to specify the gradient or not, thought the use of two different constructors. </p>
+</pre><p>Description: Derived class from <a class="el" href="class_righthandside.html" title="Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y...">Righthandside</a>. Allows the user to specify a generic function and its gradient, with the use of function pointers. The choice is given as to whether to specify the gradient or not, thought the use of two different constructors. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/macair/Documents/projectode/<a class="el" href="_generic_function_8hpp_source.html">GenericFunction.hpp</a></li>
 <li>/Users/macair/Documents/projectode/GenericFunction.cpp</li>

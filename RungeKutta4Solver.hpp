@@ -9,6 +9,8 @@
  * 			   It is derived from the abstract class AbstractOdeSolver.
  */
 
+/// \brief Class that implements 4th order Runge-Kutta method to solve a ODE of the form: dy/dt=f(y,t).
+
 #ifndef RUNGEKUTTA4SOLVERHEADERDEF
 #define RUNGEKUTTA4SOLVERHEADERDEF
 

@@ -1,20 +1,29 @@
 Library for solving differential equations of the type dy/dt=f(y,t). It can handle non-\/linear differential equation of first order. ~\newline
- It has three different ways of inputting the righandside function f(y,t), which are all implemented as subclasses of the abstract class \char`\"{}righthandside\char`\"{}\+:
+ It has three different ways of inputting the rightandside function f(y,t), which are all implemented as subclasses of the abstract class \char`\"{}righthandside\char`\"{}\+:
 
-1)As a pointer to a Generic User defined function, though the use of the \char`\"{}\+Generic\+Function\char`\"{} class. The user can specify f(y,t) and its gradient. ~\newline
+1)As a pointer to a Generic User defined function, through the use of the \char`\"{}\+Generic\+Function\char`\"{} class. The user can specify f(y,t) and its gradient. ~\newline
  2)As a generic polynomial function of maximum grade 4, with the use of \char`\"{}\+Polynomial\char`\"{} class. The function must be of the form\+: a+b$\ast$y+c$\ast$y$^\wedge$2+d$\ast$y$^\wedge$3+e$\ast$y$^\wedge$4 ~\newline
  3)As a function including a sine and a cosine of the form\+: a$\ast$sin(c$\ast$y)+b$\ast$cos(d$\ast$y). This is done with the \char`\"{}\+Sin\+Cos\char`\"{} class. ~\newline
 
 
 Six different solvers can be used, all programmed as derived classes from the \char`\"{}\+Abstract\+Ode\+Solver\char`\"{} class\+:
 
-1)\char`\"{}\+Forward\+Euler\+Solver\char`\"{}\+: Solves the differential equation using forward Euler method ~\newline
- 2)\char`\"{}\+Backward\+Euler\+Solver\char`\"{}\+: Solves the differential equation using backward Euler method ~\newline
- 3)\char`\"{}\+Twostep\+Solver\char`\"{}\+: Solves the differential equation using two step Adam Bashforth method ~\newline
- 4)\char`\"{}\+Threestep\+Solver\char`\"{}\+: Solves the differential equation using three step Adam Bashforth method ~\newline
- 5)\char`\"{}\+Fourstep\+Solver\char`\"{}\+: Solves the differential equation using four step Adam Bashforth method ~\newline
- 6)\char`\"{}\+Runge\+Kutta4\+Solver\char`\"{}\+: Solves the differential equation using fourth order Runge-\/\+Kutta method ~\newline
+1)\char`\"{}\+Forward\+Euler\+Solver\char`\"{}\+: Solves the differential equation using forward Euler method. ~\newline
+ 2)\char`\"{}\+Backward\+Euler\+Solver\char`\"{}\+: Solves the differential equation using backward Euler method. ~\newline
+ 3)\char`\"{}\+Twostep\+Solver\char`\"{}\+: Solves the differential equation using two step Adam Bashforth method. ~\newline
+ 4)\char`\"{}\+Threestep\+Solver\char`\"{}\+: Solves the differential equation using three step Adam Bashforth method. ~\newline
+ 5)\char`\"{}\+Fourstep\+Solver\char`\"{}\+: Solves the differential equation using four step Adam Bashforth method. ~\newline
+ 6)\char`\"{}\+Runge\+Kutta4\+Solver\char`\"{}\+: Solves the differential equation using fourth order Runge-\/\+Kutta method. ~\newline
 
+
+To understand how to use the library, three test files are provided\+:
+
+1)\char`\"{}\+Test\+\_\+extinction.\+cpp\char`\"{}\+: Test all the different solvers, and the \char`\"{}\+Polynomial\char`\"{} input. ~\newline
+ 2)\char`\"{}\+Test\+\_\+logistic\+\_\+regression.\+cpp\char`\"{}\+: Test three solvers, and the \char`\"{}\+Generic\+Function\char`\"{} input. ~\newline
+ 3)\char`\"{}\+Test\+\_\+\+Sin\+Cos.\+cpp\char`\"{}\+: Test two solvers, and the \char`\"{}\+Sin\+Cos\char`\"{} input method.
+
+The results will be printed on .dat files, and can be plotted using the preferred by the user. ~\newline
+ Matlab files doing plotting the results from the test files are in the documentation.
 
 The library was developed by Francesco Mancino as a project for the course \char`\"{}\+Programming concepts in scientific computing\char`\"{} at E\+P\+F\+L.
 

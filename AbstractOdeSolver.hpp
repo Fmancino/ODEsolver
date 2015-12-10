@@ -1,3 +1,5 @@
+
+
 /*!
  * AbstracOdeSolver.cpp
  *
@@ -8,6 +10,9 @@
  *Description: Abstract Base class for the family of methods for solving ODE of the form dy/dt=f(y,t).
  *			   The possible methods are defined as derived classes from this class.
  */
+
+/// \brief Abstract Base class for the family of methods for solving ODE of the form dy/dt=f(y,t).
+
 
 #ifndef ABSTRACTODESOLVERDEF
 #define ABSTRACTODESOLVERDEF

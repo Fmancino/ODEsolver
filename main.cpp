@@ -7,7 +7,11 @@ using namespace std;
 
 double fRhs(double y, double t)  // Right hand side
 {
-	return pow(y,2)+exp(-t);
+	double a;
+	if (t < 5)
+	a=pow(y,2);
+	else a=y-pow(y,2);
+	return a;
 }
 
 double gradient(double y, double t) // Derivative of the right hand side
@@ -21,17 +25,17 @@ int main() {
 	f=new GenericFunction (fRhs,gradient);
 	cout << f->gradient(3,2) << endl;
 
-	double radius=0.01;
+	double radius=0.0001;
 	double initialTime = 0.0;
 	double finalTime = 2/radius;
 	double initialValue = radius;
 
 	Righthandside * poly;
-	poly= new Polynomial<int> (0,0,1,-1);
+	poly= new Polynomial<int> (0,0,1,0);
     cout << poly->value(3,2) << endl;
 	AbstractOdeSolver* pSolver = 0;
 
-	int numberstepsAdam = 100;
+	int numberstepsAdam = 1000;
 		pSolver = new ForwardEulerSolver;
 		pSolver->SetInitialValue(initialValue);
 		pSolver->SetTimeInterval(initialTime, finalTime);
@@ -64,7 +68,9 @@ int main() {
 			ThreeStepSolutionFile.close();
 			}
 
-		pSolver = new FourStepSolver;
+
+
+		pSolver = new RungeKutta4Solver;
 		pSolver->SetInitialValue(initialValue);
 		pSolver->SetTimeInterval(initialTime, finalTime);
 		pSolver->SetNumberSteps(numberstepsAdam);

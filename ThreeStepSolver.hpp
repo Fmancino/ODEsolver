@@ -9,7 +9,7 @@
  * 			   It is derived from the abstract class AbstractOdeSolver.
  */
 
-
+/// \brief  Class that implements Four Three Adam Bashworts Method to solve a ODE of the form: dy/dt=f(y,t).
 #ifndef THREESTEPSOLVERHEADERDEF
 #define THREESTEPSOLVERHEADERDEF
 

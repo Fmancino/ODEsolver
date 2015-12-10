@@ -10,6 +10,8 @@
  *			   The choice is given as to have int or double values for the coefficients with the the use of a template.
  */
 
+/// \brief Class that allows the user to specify a polynomial of grade 2 up to 4, in the form: a+b*x+c*x^2+d*x^3+e*x^4, as the right hand side of the ODE.
+
 #ifndef POLYNOMIALHEADERDEF
 #define POLYNOMIALHEADERDEF
 

@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "ODESolver.hpp"
+#include "ODESolver.hpp" // Including the library of the ODE solver.
 #include <cmath>
 
 using namespace std;
@@ -34,7 +34,7 @@ int main() {
 	// Declaring the parameters for the solver
 	double initialTime = 0.0;
 	double finalTime = 10.0;
-	double initialValue = 5;
+	double initialValue = 1.1;
 	int numbersteps = 100;
 
 	// Creating the Right hand side equation, using the Polynomial class.

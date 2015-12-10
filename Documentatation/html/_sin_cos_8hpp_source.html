@@ -88,77 +88,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef SINCOSHEADERDEF</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define SINCOSHEADERDEF</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Righthandside.hpp&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_sin_cos.html">   18</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="class_sin_cos.html">SinCos</a>: <span class="keyword">public</span> <a class="code" href="class_righthandside.html">Righthandside</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    T a,b,c,d;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_sin_cos.html">SinCos</a>() <span class="comment">//Default constructor</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">SetGradientInfo</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            a=0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            b=0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            c=1;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            d=1;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="class_sin_cos.html">SinCos</a>() <span class="comment">//Destructor</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_sin_cos.html#a3cac71427371707bdab285bdd397aa3d">   36</a></span>&#160;    <a class="code" href="class_sin_cos.html#a3cac71427371707bdab285bdd397aa3d">SinCos</a>(T a1)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">SetGradientInfo</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        a=a1;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        b=0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        c=1;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        d=1;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_sin_cos.html#a64e4afd2a47fa1375b101b2e439be409">   46</a></span>&#160;    <a class="code" href="class_sin_cos.html#a64e4afd2a47fa1375b101b2e439be409">SinCos</a>(T a1,T b1)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">SetGradientInfo</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        a=a1;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        b=b1;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        c=1;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        d=1;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_sin_cos.html#a922f7496fd03a8429fd96e29ba21fa64">   56</a></span>&#160;    <a class="code" href="class_sin_cos.html#a922f7496fd03a8429fd96e29ba21fa64">SinCos</a>(T a1,T b1,T c1,T d1)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">SetGradientInfo</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        a=a1;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        b=b1;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        c=c1;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        d=d1;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_sin_cos.html#a2ccce937dae380440f1278f8c0f5801c">   65</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_sin_cos.html#a2ccce937dae380440f1278f8c0f5801c">value</a>(<span class="keywordtype">double</span> y, <span class="keywordtype">double</span> t) <span class="keyword">const</span> <span class="comment">//Returns the value of the function</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> a*sin(c*y)+b*cos(d*y);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_sin_cos.html#abed60e185e8838cf409613152af45ee9">   70</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_sin_cos.html#abed60e185e8838cf409613152af45ee9">gradient</a>(<span class="keywordtype">double</span> y,<span class="keywordtype">double</span> t) <span class="keyword">const</span> <span class="comment">//Returns derivative of the function</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> a*c*cos(c*y)-b*d*sin(d*y);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_sin_cos_html_a64e4afd2a47fa1375b101b2e439be409"><div class="ttname"><a href="class_sin_cos.html#a64e4afd2a47fa1375b101b2e439be409">SinCos::SinCos</a></div><div class="ttdeci">SinCos(T a1, T b1)</div><div class="ttdoc">Constructor for a function of the type: a*sin(y)+b*cos(y) </div><div class="ttdef"><b>Definition:</b> SinCos.hpp:46</div></div>
-<div class="ttc" id="class_sin_cos_html"><div class="ttname"><a href="class_sin_cos.html">SinCos</a></div><div class="ttdef"><b>Definition:</b> SinCos.hpp:18</div></div>
-<div class="ttc" id="class_sin_cos_html_a2ccce937dae380440f1278f8c0f5801c"><div class="ttname"><a href="class_sin_cos.html#a2ccce937dae380440f1278f8c0f5801c">SinCos::value</a></div><div class="ttdeci">virtual double value(double y, double t) const </div><div class="ttdoc">Virtual function to get the value of the function on the right hand side, f(y,t) for a specific y and...</div><div class="ttdef"><b>Definition:</b> SinCos.hpp:65</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef SINCOSHEADERDEF</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define SINCOSHEADERDEF</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;Righthandside.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_sin_cos.html">   20</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="class_sin_cos.html">SinCos</a>: <span class="keyword">public</span> <a class="code" href="class_righthandside.html">Righthandside</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    T a,b,c,d;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_sin_cos.html">SinCos</a>() <span class="comment">//Default constructor</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">SetGradientInfo</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            a=0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            b=0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            c=1;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            d=1;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ~<a class="code" href="class_sin_cos.html">SinCos</a>() <span class="comment">//Destructor</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_sin_cos.html#a3cac71427371707bdab285bdd397aa3d">   38</a></span>&#160;    <a class="code" href="class_sin_cos.html#a3cac71427371707bdab285bdd397aa3d">SinCos</a>(T a1)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">SetGradientInfo</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        a=a1;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        b=0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        c=1;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        d=1;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_sin_cos.html#a64e4afd2a47fa1375b101b2e439be409">   48</a></span>&#160;    <a class="code" href="class_sin_cos.html#a64e4afd2a47fa1375b101b2e439be409">SinCos</a>(T a1,T b1)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">SetGradientInfo</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        a=a1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        b=b1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        c=1;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        d=1;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_sin_cos.html#a922f7496fd03a8429fd96e29ba21fa64">   58</a></span>&#160;    <a class="code" href="class_sin_cos.html#a922f7496fd03a8429fd96e29ba21fa64">SinCos</a>(T a1,T b1,T c1,T d1)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">SetGradientInfo</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        a=a1;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        b=b1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        c=c1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        d=d1;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_sin_cos.html#a2ccce937dae380440f1278f8c0f5801c">   67</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_sin_cos.html#a2ccce937dae380440f1278f8c0f5801c">value</a>(<span class="keywordtype">double</span> y, <span class="keywordtype">double</span> t) <span class="keyword">const</span> <span class="comment">//Returns the value of the function</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> a*sin(c*y)+b*cos(d*y);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_sin_cos.html#abed60e185e8838cf409613152af45ee9">   72</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_sin_cos.html#abed60e185e8838cf409613152af45ee9">gradient</a>(<span class="keywordtype">double</span> y,<span class="keywordtype">double</span> t) <span class="keyword">const</span> <span class="comment">//Returns derivative of the function</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> a*c*cos(c*y)-b*d*sin(d*y);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_sin_cos_html_a64e4afd2a47fa1375b101b2e439be409"><div class="ttname"><a href="class_sin_cos.html#a64e4afd2a47fa1375b101b2e439be409">SinCos::SinCos</a></div><div class="ttdeci">SinCos(T a1, T b1)</div><div class="ttdoc">Constructor for a function of the type: a*sin(y)+b*cos(y) </div><div class="ttdef"><b>Definition:</b> SinCos.hpp:48</div></div>
+<div class="ttc" id="class_sin_cos_html"><div class="ttname"><a href="class_sin_cos.html">SinCos</a></div><div class="ttdoc">Class that allows the user to specify a function of the type f(y,t)=a*sin(c*y)+b*cos(d*y) for the rig...</div><div class="ttdef"><b>Definition:</b> SinCos.hpp:20</div></div>
+<div class="ttc" id="class_sin_cos_html_a2ccce937dae380440f1278f8c0f5801c"><div class="ttname"><a href="class_sin_cos.html#a2ccce937dae380440f1278f8c0f5801c">SinCos::value</a></div><div class="ttdeci">virtual double value(double y, double t) const </div><div class="ttdoc">Virtual function to get the value of the function on the right hand side, f(y,t) for a specific y and...</div><div class="ttdef"><b>Definition:</b> SinCos.hpp:67</div></div>
 <div class="ttc" id="class_righthandside_html_ab9a7d9fb588db3cf6f0793dd3c610b21"><div class="ttname"><a href="class_righthandside.html#ab9a7d9fb588db3cf6f0793dd3c610b21">Righthandside::SetGradientInfo</a></div><div class="ttdeci">void SetGradientInfo(bool a)</div><div class="ttdoc">Function to set the information about the gradient: if we have a gradient or not (going to be used in...</div><div class="ttdef"><b>Definition:</b> Righthandside.cpp:17</div></div>
-<div class="ttc" id="class_righthandside_html"><div class="ttname"><a href="class_righthandside.html">Righthandside</a></div><div class="ttdef"><b>Definition:</b> Righthandside.hpp:16</div></div>
-<div class="ttc" id="class_sin_cos_html_abed60e185e8838cf409613152af45ee9"><div class="ttname"><a href="class_sin_cos.html#abed60e185e8838cf409613152af45ee9">SinCos::gradient</a></div><div class="ttdeci">virtual double gradient(double y, double t) const </div><div class="ttdoc">Virtual function to get the value gradient of the function on the right hand side, f&#39;(y,t) for a specific y and t. </div><div class="ttdef"><b>Definition:</b> SinCos.hpp:70</div></div>
-<div class="ttc" id="class_sin_cos_html_a922f7496fd03a8429fd96e29ba21fa64"><div class="ttname"><a href="class_sin_cos.html#a922f7496fd03a8429fd96e29ba21fa64">SinCos::SinCos</a></div><div class="ttdeci">SinCos(T a1, T b1, T c1, T d1)</div><div class="ttdoc">Constructor for a function of the type: f(y,t)=a*sin(c*y)+b*cos(d*y) </div><div class="ttdef"><b>Definition:</b> SinCos.hpp:56</div></div>
-<div class="ttc" id="class_sin_cos_html_a3cac71427371707bdab285bdd397aa3d"><div class="ttname"><a href="class_sin_cos.html#a3cac71427371707bdab285bdd397aa3d">SinCos::SinCos</a></div><div class="ttdeci">SinCos(T a1)</div><div class="ttdoc">Constructor for a sine function : a*sin(y) (for constructing a pure cosine function it is possible to...</div><div class="ttdef"><b>Definition:</b> SinCos.hpp:36</div></div>
+<div class="ttc" id="class_righthandside_html"><div class="ttname"><a href="class_righthandside.html">Righthandside</a></div><div class="ttdoc">Abstract Base class of the family of possible right hand side functions f(y,t) in the ODE dy/dt=f(y...</div><div class="ttdef"><b>Definition:</b> Righthandside.hpp:17</div></div>
+<div class="ttc" id="class_sin_cos_html_abed60e185e8838cf409613152af45ee9"><div class="ttname"><a href="class_sin_cos.html#abed60e185e8838cf409613152af45ee9">SinCos::gradient</a></div><div class="ttdeci">virtual double gradient(double y, double t) const </div><div class="ttdoc">Virtual function to get the value gradient of the function on the right hand side, f&#39;(y,t) for a specific y and t. </div><div class="ttdef"><b>Definition:</b> SinCos.hpp:72</div></div>
+<div class="ttc" id="class_sin_cos_html_a922f7496fd03a8429fd96e29ba21fa64"><div class="ttname"><a href="class_sin_cos.html#a922f7496fd03a8429fd96e29ba21fa64">SinCos::SinCos</a></div><div class="ttdeci">SinCos(T a1, T b1, T c1, T d1)</div><div class="ttdoc">Constructor for a function of the type: f(y,t)=a*sin(c*y)+b*cos(d*y) </div><div class="ttdef"><b>Definition:</b> SinCos.hpp:58</div></div>
+<div class="ttc" id="class_sin_cos_html_a3cac71427371707bdab285bdd397aa3d"><div class="ttname"><a href="class_sin_cos.html#a3cac71427371707bdab285bdd397aa3d">SinCos::SinCos</a></div><div class="ttdeci">SinCos(T a1)</div><div class="ttdoc">Constructor for a sine function : a*sin(y) (for constructing a pure cosine function it is possible to...</div><div class="ttdef"><b>Definition:</b> SinCos.hpp:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
