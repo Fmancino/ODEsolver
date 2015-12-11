@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['forwardeulersolver',['ForwardEulerSolver',['../class_forward_euler_solver.html',1,'ForwardEulerSolver'],['../class_forward_euler_solver.html#a56271b4e9c08874b64e20981f4004294',1,'ForwardEulerSolver::ForwardEulerSolver()']]],
-  ['fourstepsolver',['FourStepSolver',['../class_four_step_solver.html',1,'']]]
-];
