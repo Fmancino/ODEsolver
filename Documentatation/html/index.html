@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Library for solving differential equations of the type dy/dt=f(y,t). It can handle non-linear differential equation of first order. <br />
- It has three different ways of inputting the rightandside function f(y,t), which are all implemented as subclasses of the abstract class "righthandside":</p>
+ It has three different ways of inputting the right hand side function f(y,t), which are all implemented as subclasses of the abstract class "righthandside":</p>
 <p>1)As a pointer to a Generic User defined function, through the use of the "GenericFunction" class. The user can specify f(y,t) and its gradient. <br />
  2)As a generic polynomial function of maximum grade 4, with the use of "Polynomial" class. The function must be of the form: a+b*y+c*y^2+d*y^3+e*y^4 <br />
  3)As a function including a sine and a cosine of the form: a*sin(c*y)+b*cos(d*y). This is done with the "SinCos" class. <br />
@@ -96,8 +96,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>1)"Test_extinction.cpp": Test all the different solvers, and the "Polynomial" input. <br />
  2)"Test_logistic_regression.cpp": Test three solvers, and the "GenericFunction" input. <br />
  3)"Test_SinCos.cpp": Test two solvers, and the "SinCos" input method.</p>
-<p>The results will be printed on .dat files, and can be plotted using the preferred by the user. <br />
- Matlab files doing plotting the results from the test files are in the documentation.</p>
+<p>The results will be printed on .dat files, and can be plotted using the software preferred by the user. <br />
+ Matlab files plotting the results from the test files are in the documentation.</p>
 <p>The library was developed by Francesco Mancino as a project for the course "Programming concepts in scientific computing" at EPFL.</p>
 <p>Contact: <a href="#" onclick="location.href='mai'+'lto:'+'fra'+'nc'+'esc'+'o.'+'man'+'ci'+'no@'+'EP'+'FL.'+'ch'; return false;">franc<span style="display: none;">.nosp@m.</span>esco<span style="display: none;">.nosp@m.</span>.manc<span style="display: none;">.nosp@m.</span>ino@<span style="display: none;">.nosp@m.</span>EPFL.<span style="display: none;">.nosp@m.</span>ch</a> </p>
 </div></div><!-- contents -->

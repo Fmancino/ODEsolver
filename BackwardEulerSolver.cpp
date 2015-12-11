@@ -51,7 +51,7 @@ void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 		y_newton=y_prev + h * f->value(y_prev,t_prev);  // Initial guess with "Euler forward" method.
 		t_next=t_prev + h; //Update of the time
 
-		while (diff>0.01 && n_iterations<10000)
+		while (diff>0.001 && n_iterations<10000)
 		{
 		y_next = y_newton - (y_newton - y_prev - h * f->value(y_newton,t_next)) / (1 - h * f->gradient(y_newton,t_next)); // Iteration of Newtons method
 		diff = std::abs (y_next - y_newton); // Difference between the values obtained in every iteration of Newtons Method, used as a convergence criterion.
@@ -59,20 +59,20 @@ void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 		n_iterations += 1;
 		if (n_iterations==10000)
 				{
-			std::cout << "ERROR: max number of iterations for Newtons method reached at time: " << t_prev  << ". The Backward Euler solver will stop." << std::endl;
+			std::cout << "<Backwardeulersolver> ERROR: Max number of iterations for Newtons method reached at time: " << t_prev  << ". The Backward Euler solver will stop." << std::endl;
 			return;
 				}
 		}
 
 		if (isinf(y_next))  // Stops the solver if it reaches infinity.
 				{
-					std::cout << "Function Reached infinity at time " << t_next << ", stopping iterations for the Backward Euler solver." << std::endl;
+					std::cout << "<Backwardeulersolver> ERROR:  Function Reached infinity at time " << t_next << ", stopping iterations for the Backward Euler solver." << std::endl;
 					return;
 				}
 
 		if (isnan(y_next)) // Stops the solver if it returns NaN.
 				{
-					std::cout << "Function Returns NaN at time " << t_next << ", stopping iterations for the Backward Euler solver." << std::endl;
+					std::cout << "<Backwardeulersolver> ERROR:Function Returns NaN at time " << t_next << ", stopping iterations for the Backward Euler solver."<< std::endl;
 					return;
 				}
 
@@ -92,17 +92,19 @@ void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 		    diff=1.0; // Difference between the values obtained in every iteration of Newtons Method. To make the Algoritm start it has to be initialized with a value bigger than 0.01.
 			for (int i=1; i <=n_steps; i++)
 			{
-				y_newton1=y_prev + 4/5 * h * f->value(y_prev,t_prev);
-				y_newton2=y_prev + 6/5 * h * f->value(y_prev,t_prev);
+				y_newton1=y_prev + 3/4 * h * f->value(y_prev,t_prev);
+				y_newton2=y_prev + 5/4 * h * f->value(y_prev,t_prev);
 				t_next=t_prev+h; //Update of the time
 
-				while (diff>0.01 && n_iterations<10001)
+				while (diff>0.001 && n_iterations<10000)
 				{
 				// Iteration of secant method:
 				y_next=(y_newton2 * (y_newton1 - y_prev - h * f->value(y_newton1,t_next)) - y_newton1 * (y_newton2 - y_prev - h * f->value(y_newton2,t_next))) / ((y_newton1 - y_prev - h * f->value(y_newton1,t_next)) - (y_newton2 - y_prev - h * f->value(y_newton2,t_next)));
 				diff= std::abs (y_next - y_newton1); // Difference between the values obtained in every iteration of Newtons Method, used as a convergence criterion.
-				y_newton1=y_next;
+
 				y_newton2=y_newton1;
+				y_newton1=y_next;
+
 				n_iterations += 1;
 				if (n_iterations==10000)
 						{
@@ -119,10 +121,9 @@ void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 
 				if (isnan(y_next)) // Stops the solver if it returns NaN.
 						{
-							std::cout << "<Backwardeulersolver> ERROR:Function Returns NaN at time " << t_next << ", stopping iterations for the Backward Euler solver (secant)." << std::endl;
+							std::cout << "<Backwardeulersolver> ERROR:Function Returns NaN at time " << t_next << ", stopping iterations for the Backward Euler solver (secant)."<< std::endl;
 							return;
 						}
-
 
 				n_iterations=0;
 				diff=1.0;

@@ -21,7 +21,7 @@
 
 /** \mainpage
  ** Library for solving differential equations of the type dy/dt=f(y,t). It can handle non-linear differential equation of first order. <br>
- *  It has three different ways of inputting the rightandside function f(y,t), which are all implemented as subclasses of the abstract class "righthandside":
+ *  It has three different ways of inputting the right hand side function f(y,t), which are all implemented as subclasses of the abstract class "righthandside":
  *
  * 1)As a pointer to a Generic User defined function, through the use of the "GenericFunction" class. The user can specify f(y,t) and its gradient. <br>
  * 2)As a generic polynomial function of maximum grade 4, with the use of "Polynomial" class. The function must be of the form: a+b*y+c*y^2+d*y^3+e*y^4 <br>

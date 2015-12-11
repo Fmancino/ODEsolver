@@ -1,5 +1,5 @@
 Library for solving differential equations of the type dy/dt=f(y,t). It can handle non-\/linear differential equation of first order. ~\newline
- It has three different ways of inputting the rightandside function f(y,t), which are all implemented as subclasses of the abstract class \char`\"{}righthandside\char`\"{}\+:
+ It has three different ways of inputting the right hand side function f(y,t), which are all implemented as subclasses of the abstract class \char`\"{}righthandside\char`\"{}\+:
 
 1)As a pointer to a Generic User defined function, through the use of the \char`\"{}\+Generic\+Function\char`\"{} class. The user can specify f(y,t) and its gradient. ~\newline
  2)As a generic polynomial function of maximum grade 4, with the use of \char`\"{}\+Polynomial\char`\"{} class. The function must be of the form\+: a+b$\ast$y+c$\ast$y$^\wedge$2+d$\ast$y$^\wedge$3+e$\ast$y$^\wedge$4 ~\newline
@@ -22,8 +22,8 @@ To understand how to use the library, three test files are provided\+:
  2)\char`\"{}\+Test\+\_\+logistic\+\_\+regression.\+cpp\char`\"{}\+: Test three solvers, and the \char`\"{}\+Generic\+Function\char`\"{} input. ~\newline
  3)\char`\"{}\+Test\+\_\+\+Sin\+Cos.\+cpp\char`\"{}\+: Test two solvers, and the \char`\"{}\+Sin\+Cos\char`\"{} input method.
 
-The results will be printed on .dat files, and can be plotted using the preferred by the user. ~\newline
- Matlab files doing plotting the results from the test files are in the documentation.
+The results will be printed on .dat files, and can be plotted using the software preferred by the user. ~\newline
+ Matlab files plotting the results from the test files are in the documentation.
 
 The library was developed by Francesco Mancino as a project for the course \char`\"{}\+Programming concepts in scientific computing\char`\"{} at E\+P\+F\+L.
 
