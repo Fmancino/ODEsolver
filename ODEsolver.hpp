@@ -42,8 +42,8 @@
  * 2)"Test_logistic_regression.cpp": Test three solvers, and the "GenericFunction" input. <br>
  * 3)"Test_SinCos.cpp": Test two solvers, and the "SinCos" input method.
  *
- * The results will be printed on .dat files, and can be plotted using the preferred by the user. <br>
- * Matlab files doing plotting the results from the test files are in the documentation.
+ * The results will be printed on .dat files, and can be plotted using the software preferred by the user. <br>
+ * Matlab files plotting the results from the test files are in the documentation.
  *
  * The library was developed by Francesco Mancino as a project for the course "Programming concepts in scientific computing" at EPFL.
  *

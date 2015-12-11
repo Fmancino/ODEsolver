@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "ODESolver.hpp" // Including the library of the ODE solver.
+#include "ODEsolver.hpp" // Including the library of the ODE solver.
 #include <cmath>
 
 using namespace std;

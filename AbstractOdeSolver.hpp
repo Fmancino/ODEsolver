@@ -16,7 +16,7 @@
 
 #ifndef ABSTRACTODESOLVERDEF
 #define ABSTRACTODESOLVERDEF
-#include "RightHandSide.hpp"
+#include "Righthandside.hpp"
 #include <fstream>
 
 

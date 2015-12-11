@@ -53,8 +53,8 @@ void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 
 		while (diff>0.01 && n_iterations<10000)
 		{
-		y_next=y_newton - (y_newton - y_prev - h * f->value(y_newton,t_next)) / (1 - h * f->gradient(y_newton,t_next)); // Iteration of Newtons method
-		diff=abs(y_next - y_newton); // Difference between the values obtained in every iteration of Newtons Method, used as a convergence criterion.
+		y_next = y_newton - (y_newton - y_prev - h * f->value(y_newton,t_next)) / (1 - h * f->gradient(y_newton,t_next)); // Iteration of Newtons method
+		diff = std::abs (y_next - y_newton); // Difference between the values obtained in every iteration of Newtons Method, used as a convergence criterion.
 		y_newton=y_next;
 		n_iterations += 1;
 		if (n_iterations==10000)
@@ -100,7 +100,7 @@ void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 				{
 				// Iteration of secant method:
 				y_next=(y_newton2 * (y_newton1 - y_prev - h * f->value(y_newton1,t_next)) - y_newton1 * (y_newton2 - y_prev - h * f->value(y_newton2,t_next))) / ((y_newton1 - y_prev - h * f->value(y_newton1,t_next)) - (y_newton2 - y_prev - h * f->value(y_newton2,t_next)));
-				diff=abs(y_next - y_newton1); // Difference between the values obtained in every iteration of Newtons Method, used as a convergence criterion.
+				diff= std::abs (y_next - y_newton1); // Difference between the values obtained in every iteration of Newtons Method, used as a convergence criterion.
 				y_newton1=y_next;
 				y_newton2=y_newton1;
 				n_iterations += 1;

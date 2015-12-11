@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "ODESolver.hpp"
+#include "ODEsolver.hpp"
 #include <cmath>
 
 using namespace std;

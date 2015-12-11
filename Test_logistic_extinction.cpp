@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "ODESolver.hpp" // Including the library of the ODE solver.
+#include "ODEsolver.hpp" // Including the library of the ODE solver.
 #include <cmath>
 
 using namespace std;
@@ -201,7 +201,7 @@ int main() {
 	//Running the solver, if the solution file is open.
 	if (BackwardSecantSolutionFile.is_open())
 	{
-	pSolver->SolveEquation(poly,BackwardSecantSolutionFile);
+	pSolver->SolveEquation(f,BackwardSecantSolutionFile);
 	BackwardSecantSolutionFile.close();
 	}
 	else
