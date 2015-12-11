@@ -34,13 +34,12 @@ int main() {
 	// Declaring the parameters for the solver
 	double initialTime = 0.0;
 	double finalTime = 10.0;
-	double initialValue = 1.1;
+	double initialValue = 1;
 	int numbersteps = 100;
 
 	// Creating the Right hand side equation, using the Polynomial class.
 	Righthandside * poly;
 	poly= new Polynomial<double> (0,-r,(r/T+r/K),-r/(T*K));
-    cout << poly->value(3,2) << endl;
 
     //Pointer to the the base class of the family three of solvers.
     AbstractOdeSolver* pSolver = 0;

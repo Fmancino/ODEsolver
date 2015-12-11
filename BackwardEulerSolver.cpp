@@ -96,6 +96,8 @@ void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 				y_newton2=y_prev + 5/4 * h * f->value(y_prev,t_prev);
 				t_next=t_prev+h; //Update of the time
 
+				if (y_newton1==y_newton2) // f->value(y_prev,t_prev)==0
+					y_newton1=y_newton2+0.005; //introduce "little" offset, just slightly bigger than the convergence criterion
 				while (diff>0.001 && n_iterations<10000)
 				{
 				// Iteration of secant method:
@@ -121,7 +123,7 @@ void BackwardEulerSolver::SolveEquation(Righthandside* f,std::ostream& stream)
 
 				if (isnan(y_next)) // Stops the solver if it returns NaN.
 						{
-							std::cout << "<Backwardeulersolver> ERROR:Function Returns NaN at time " << t_next << ", stopping iterations for the Backward Euler solver (secant)."<< std::endl;
+							std::cout << "<Backwardeulersolver> ERROR:Function Returns NaN at time " << t_next << ", stopping iterations for the Backward Euler solver (secant)."<< diff << std::endl;
 							return;
 						}
 
