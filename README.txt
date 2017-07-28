@@ -31,4 +31,4 @@ The results will be printed on .dat files, and can be plotted using the software
 
 The library was developed by Francesco Mancino as a project for the course "Programming concepts in scientific computing" at EPFL.
 
- Contact: francesco.mancino@EPFL.ch
+ Contact: francescomancino1@gmail.com
