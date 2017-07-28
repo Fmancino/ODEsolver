@@ -1,4 +1,4 @@
-hghgjghj/*
+/*
  * Righthandside.cpp
  * Created on: Dic, 2015
  *     Author: Francesco Mancino
