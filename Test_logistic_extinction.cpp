@@ -34,7 +34,7 @@ int main() {
 	// Declaring the parameters for the solver
 	double initialTime = 0.0;
 	double finalTime = 10.0;
-	double initialValue = 1;
+	double initialValue = 5;
 	int numbersteps = 100;
 
 	// Creating the Right hand side equation, using the Polynomial class.
@@ -43,7 +43,6 @@ int main() {
 
     //Pointer to the the base class of the family three of solvers.
     AbstractOdeSolver* pSolver = 0;
-
 
     //---- Create e new Forward Euler solver:  --------------------------------------------------------------------------------
 	pSolver = new ForwardEulerSolver;

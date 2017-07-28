@@ -78,7 +78,7 @@ template <class T> class Polynomial: public Righthandside
 
     virtual double gradient(double y,double t) const //Returns derivative of the polynomial
     {
-    	return b+2*c*y+3*d*pow(y,2)+4*d*pow(y,3);
+    	return b+2*c*y+3*d*pow(y,2)+4*e*pow(y,3);
     }
 };
 
