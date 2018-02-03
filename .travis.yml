@@ -2,10 +2,7 @@ language: cpp
 compiler:
   - gcc
 before_script:
-  - cd ODEsolver/build
-  - cmake ..
-  - ls
-  - cd ../../test/build
+  - cd test/build
   - cmake ..
   - ls
 script:
