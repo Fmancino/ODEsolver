@@ -1,0 +1,9 @@
+language: cpp
+compiler:
+  - gcc
+before_script:
+  - cd ODEsolver/build
+  - cmake ..
+script:
+  - make
+  - cd ../bin
