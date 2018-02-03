@@ -1,1 +1,7 @@
-## Build here :-)
+## Build tests here
+
+Commands:
+```
+cmake ..
+make
+```
