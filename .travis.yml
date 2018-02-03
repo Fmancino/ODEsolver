@@ -5,5 +5,8 @@ before_script:
   - cd ODEsolver/build
   - cmake ..
   - ls
+  - cd ../../test/build
+  - cmake ..
+  - ls
 script:
   - make
