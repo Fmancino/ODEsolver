@@ -6,7 +6,6 @@ before_script:
   - cd ..
   - ls
   - cmake
-  - cd build
 script:
   - make
   - cd ../bin
