@@ -3,9 +3,6 @@ compiler:
   - gcc
 before_script:
   - cd ODEsolver/build
-  - cd ..
-  - ls
-  - cmake
+  - cmake ../CMakeLists.txt
 script:
   - make
-  - cd ../bin
