@@ -49,7 +49,7 @@ void ThreeStepSolver::SolveEquation(Righthandside* f, std::ostream& stream)
     stream << t_prev3 << " " << y_prev3 << "\n"; // One iteration of Two steps Adam Bashworts to find a third initial value
 
     // Implementing Three Steps Adam Bashword:
-    for (int i = 3; i < = n_steps; i++)
+    for (int i = 3; i <= n_steps; i++)
     {
         // One iteration of Three Steps Adam Bashword:
         y_next = y_prev3 + h * (f->value(y_prev3, t_prev3) * 23/12 - f->value(y_prev2, t_prev2) * 4/3 + f->value(y_prev1, t_prev1) * 5/12);
