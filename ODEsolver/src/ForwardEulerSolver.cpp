@@ -2,7 +2,7 @@
  * ForwardEulersolver.hpp
  * Created on: Dic, 2015
  *     Author: Francesco Mancino
- *Description: Class that implements Forward Eulers method to solve a ODE of the form: dy/dt=f(y,t).
+ *Description: Class that implements Forward Eulers method to solve a ODE of the form: dy/dt = f(y, t).
  * It is derived from the abstract class AbstractOdeSolver.
  */
 
@@ -36,10 +36,10 @@ void ForwardEulerSolver::SolveEquation(Righthandside* f, std::ostream& stream)
 
     stream << t_prev << " " << y_prev << "\n"; // Printing to file the initial values.
 
-    for (int i=1; i <=n_steps; i++)
+    for (int i = 1; i  <= n_steps; i++)
     {
-        y_next = y_prev + h * f->value(y_prev,t_prev); // Approximation of the next value of the function with Eulers forward method.
-        t_next=t_prev + h; // Updating the time
+        y_next = y_prev + h * f->value(y_prev, t_prev); // Approximation of the next value of the function with Eulers forward method.
+        t_next = t_prev + h; // Updating the time
 
         stream << t_next << " " << y_next << "\n"; // Printing to file the function values.
 
