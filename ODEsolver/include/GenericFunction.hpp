@@ -6,7 +6,7 @@
  *     Author: Francesco Mancino
  *
  *Description: Derived class from Righthandside. Allows the user to specify a generic function and its gradient, with the use of function pointers.
- *			   The choice is given as to whether to specify the gradient or not, thought the use of two different constructors.
+ *             The choice is given as to whether to specify the gradient or not, thought the use of two different constructors.
  */
 
 /// \brief  Class that allows the user to specify a generic function and its gradient, with the use of function pointers, as the right hand side of the ODE.
@@ -17,23 +17,23 @@
 
 class GenericFunction: public Righthandside
 {
-	private:
+    private:
 
-	double (*f_rhs)(double y, double t); ///< Function on the right hand side: f(y,t)
-	double (*g_rhs)(double y, double t);///< Gradient of the above function
+    double (*f_rhs)(double y, double t); ///< Function on the right hand side: f(y, t)
+    double (*g_rhs)(double y, double t);///< Gradient of the above function
 
-	public:
+    public:
 
-	GenericFunction();
-	virtual ~GenericFunction(); //Default Constructor and destructor
-
-
-	GenericFunction(double (*f)(double y, double t));	///< Constructor if you have only the function
-	GenericFunction(double (*f)(double y, double t),double (*g)(double y, double t));	///< Constructor if you have function and gradient
+    GenericFunction();
+    virtual ~GenericFunction(); //Default Constructor and destructor
 
 
-	virtual double value(double y, double t) const;
-	virtual double gradient(double y, double t) const; //Virtual functions to get value and gradient of a generic function.
+    GenericFunction(double (*f)(double y, double t));   ///< Constructor if you have only the function
+    GenericFunction(double (*f)(double y, double t), double (*g)(double y, double t));   ///< Constructor if you have function and gradient
+
+
+    virtual double value(double y, double t) const;
+    virtual double gradient(double y, double t) const; //Virtual functions to get value and gradient of a generic function.
 
 };
 #endif

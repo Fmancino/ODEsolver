@@ -3,8 +3,8 @@
  * Created on: Dic, 2015
  *     Author: Francesco Mancino
  *Description: This header groups toghether all the needed header files to use this ODE library,
- *			   it's the only header the user needs to include to access all the functionalities.
- *			   Underneath there is also a description of the library for code documentation.
+ *             it's the only header the user needs to include to access all the functionalities.
+ *             Underneath there is also a description of the library for code documentation.
  */
 
 #include "Righthandside.hpp"
@@ -20,10 +20,10 @@
 #include "SinCos.hpp"
 
 /** \mainpage
- ** Library for solving differential equations of the type dy/dt=f(y,t). It can handle non-linear differential equation of first order. <br>
- *  It has three different ways of inputting the right hand side function f(y,t), which are all implemented as subclasses of the abstract class "righthandside":
+ ** Library for solving differential equations of the type dy/dt = f(y, t). It can handle non-linear differential equation of first order. <br>
+ *  It has three different ways of inputting the right hand side function f(y, t), which are all implemented as subclasses of the abstract class "righthandside":
  *
- * 1)As a pointer to a Generic User defined function, through the use of the "GenericFunction" class. The user can specify f(y,t) and its gradient. <br>
+ * 1)As a pointer to a Generic User defined function, through the use of the "GenericFunction" class. The user can specify f(y, t) and its gradient. <br>
  * 2)As a generic polynomial function of maximum grade 4, with the use of "Polynomial" class. The function must be of the form: a+b*y+c*y^2+d*y^3+e*y^4 <br>
  * 3)As a function including a sine and a cosine of the form: a*sin(c*y)+b*cos(d*y). This is done with the "SinCos" class. <br>
  *

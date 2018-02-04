@@ -5,11 +5,11 @@
  *
  *     Author: Francesco Mancino
  *
- *Description: Class that implements 4th order Runge-Kutta method to solve a ODE of the form: dy/dt=f(y,t).
- * 			   It is derived from the abstract class AbstractOdeSolver.
+ *Description: Class that implements 4th order Runge-Kutta method to solve a ODE of the form: dy/dt = f(y, t).
+ *             It is derived from the abstract class AbstractOdeSolver.
  */
 
-/// \brief Class that implements 4th order Runge-Kutta method to solve a ODE of the form: dy/dt=f(y,t).
+/// \brief Class that implements 4th order Runge-Kutta method to solve a ODE of the form: dy/dt = f(y, t).
 
 #ifndef RUNGEKUTTA4SOLVERHEADERDEF
 #define RUNGEKUTTA4SOLVERHEADERDEF
@@ -21,11 +21,11 @@
 class RungeKutta4Solver: public AbstractOdeSolver
 {
 public:
-	RungeKutta4Solver();
-	virtual ~RungeKutta4Solver(); // Constructor and Destructor
+    RungeKutta4Solver();
+    virtual ~RungeKutta4Solver(); // Constructor and Destructor
 
-	//Method for solving the ODE:
-	virtual void SolveEquation(Righthandside* f,std::ostream& stream);
+    // Method for solving the ODE:
+    virtual void SolveEquation(Righthandside* f, std::ostream& stream);
 };
 
 #endif

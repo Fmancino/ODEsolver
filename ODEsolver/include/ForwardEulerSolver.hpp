@@ -5,11 +5,11 @@
  *
  *     Author: Francesco Mancino
  *
- *Description: Class that implements Forward Eulers method to solve a ODE of the form: dy/dt=f(y,t).
- * 				It is derived from the abstract class AbstractOdeSolver.
+ *Description: Class that implements Forward Eulers method to solve a ODE of the form: dy/dt = f(y, t).
+ *              It is derived from the abstract class AbstractOdeSolver.
  */
 
-/// \brief Class that implements Forward Eulers method to solve a ODE of the form: dy/dt=f(y,t).
+/// \brief Class that implements Forward Eulers method to solve a ODE of the form: dy/dt = f(y, t).
 
 #ifndef FORWARDEULERSOLVERHEADERDEF
 #define FORWARDEULERSOLVERHEADERDEF
@@ -21,11 +21,11 @@
 class ForwardEulerSolver: public AbstractOdeSolver
 {
 public:
-	ForwardEulerSolver();
-	virtual ~ForwardEulerSolver(); // Constructor and Destructor
+    ForwardEulerSolver();
+    virtual ~ForwardEulerSolver(); // Constructor and Destructor
 
-	//Method for solving the ODE:
-	virtual void SolveEquation(Righthandside* f,std::ostream& stream);
+    // Method for solving the ODE:
+    virtual void SolveEquation(Righthandside* f, std::ostream& stream);
 };
 
 #endif
