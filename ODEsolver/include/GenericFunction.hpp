@@ -25,7 +25,7 @@ class GenericFunction: public Righthandside
     public:
 
     GenericFunction();
-    virtual ~GenericFunction(); //Default Constructor and destructor
+    virtual ~GenericFunction(); // Default Constructor and destructor
 
 
     GenericFunction(double (*f)(double y, double t));   ///< Constructor if you have only the function
@@ -33,7 +33,7 @@ class GenericFunction: public Righthandside
 
 
     virtual double value(double y, double t) const;
-    virtual double gradient(double y, double t) const; //Virtual functions to get value and gradient of a generic function.
+    virtual double gradient(double y, double t) const; // Virtual functions to get value and gradient of a generic function.
 
 };
 #endif

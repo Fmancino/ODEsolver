@@ -22,7 +22,7 @@ template <class T> class SinCos: public Righthandside
     private:
     T a, b, c, d;
     public:
-    SinCos() //Default constructor
+    SinCos() // Default constructor
         {
             SetGradientInfo(true);
             a = 0;
@@ -34,7 +34,7 @@ template <class T> class SinCos: public Righthandside
     ~SinCos() // Destructor
     {}
 
-    ///Constructor for a sine function : a*sin(y) (for constructing a pure cosine function  it is possible to call SinCos(0, 1))
+    /// Constructor for a sine function : a*sin(y) (for constructing a pure cosine function  it is possible to call SinCos(0, 1))
     SinCos(T a1)
     {
         SetGradientInfo(true);

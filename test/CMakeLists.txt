@@ -19,6 +19,6 @@ add_executable(SinCos Test_SinCos.cpp)
 
 target_link_libraries(SinCos ODEsolver)
 
-add_executable(GenFunction Test_GenericFunction.cpp )
+add_executable(GenFunction Test_GenericFunction.cpp)
 
 target_link_libraries(GenFunction ODEsolver)

@@ -33,7 +33,7 @@ class AbstractOdeSolver
     virtual ~AbstractOdeSolver(); // Destructor
 
     void SetNumberSteps(int n); ///< Sets the number of steps taken by the ODE solver   .
-    void SetTimeInterval(double t0, double t1); ///<Sets the time interval of the solution
+    void SetTimeInterval(double t0, double t1); ///< Sets the time interval of the solution
     void SetInitialValue(double y0); ///< Sets the initial value of the solution
 
 
